@@ -66,7 +66,7 @@
             if (count($images) > 0) {
                 foreach ($images as $item) {
                     $title = $item['title' . $lang_suffix] ?: 'Gallery Image';
-                    $image = '/assets/uploads/' . $item['image'];
+                    $image = BASE_URL . '/assets/uploads/' . $item['image'];
                     ?>
                     <div class="gallery-item">
                         <img src="<?php echo $image; ?>" alt="<?php echo htmlspecialchars($title); ?>">

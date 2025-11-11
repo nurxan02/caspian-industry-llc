@@ -28,7 +28,7 @@
     max-height: 100px;
     object-fit: contain;
     margin-bottom: var(--spacing-md);
-    filter: grayscale(1);
+    filter: grayscale(1) contrast(0.3);
     opacity: 0.7;
     transition: all var(--transition-normal);
 }
@@ -72,7 +72,7 @@
             
             if (count($partners) > 0) {
                 foreach ($partners as $partner) {
-                    $logo = '/assets/uploads/' . $partner['logo'];
+                    $logo = BASE_URL . '/assets/uploads/' . $partner['logo'];
                     ?>
                     <div class="partner-card">
                         <img src="<?php echo $logo; ?>" alt="<?php echo htmlspecialchars($partner['name']); ?>" class="partner-logo">
