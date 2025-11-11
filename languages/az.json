@@ -1,0 +1,60 @@
+{
+  "nav_home": "Ana Səhifə",
+  "nav_about": "Haqqımızda",
+  "nav_news": "Xəbərlər",
+  "nav_projects": "Layihələr",
+  "nav_gallery": "Qalereya",
+  "nav_partners": "Tərəfdaşlar",
+  "nav_contact": "Əlaqə",
+  "nav_faq": "FAQ",
+  
+  "hero_title": "Sərhədsiz əməkdaşlıq",
+  "hero_subtitle": "Xəzər regionunda aparıcı sənaye təchizatçısı",
+  "hero_cta": "Xidmətlərimiz",
+  
+  "about_title": "Caspian Industry haqqında",
+  "about_description": "Biz Xəzər regionunda kompleks həllər təqdim edən aparıcı sənaye təchizatçısıyıq.",
+  
+  "contact_title": "Bizimlə əlaqə saxlayın",
+  "contact_name": "Adınız",
+  "contact_email": "Email",
+  "contact_phone": "Telefon",
+  "contact_subject": "Mövzu",
+  "contact_message": "Mesajınız",
+  "contact_send": "Göndər",
+  "contact_info": "Əlaqə məlumatları",
+  "contact_address": "Ünvan",
+  
+  "news_title": "Son xəbərlər",
+  "news_read_more": "Daha çox",
+  "news_no_items": "Xəbər yoxdur",
+  
+  "projects_title": "Layihələrimiz",
+  "projects_view": "Layihəyə bax",
+  "projects_no_items": "Layihə yoxdur",
+  "projects_client": "Müştəri",
+  "projects_location": "Yer",
+  "projects_completed": "Tamamlandı",
+  
+  "gallery_title": "Qalereya",
+  "gallery_no_items": "Şəkil yoxdur",
+  
+  "partners_title": "Tərəfdaşlarımız",
+  "partners_no_items": "Tərəfdaş yoxdur",
+  
+  "faq_title": "Tez-tez verilən suallar",
+  "faq_no_items": "Sual yoxdur",
+  
+  "footer_about": "Caspian Industry sənaye sektorunda aparıcı təchizatçıdır və keyfiyyətli məhsul və xidmətlər təqdim edir.",
+  "footer_quick_links": "Sürətli keçidlər",
+  "footer_contact": "Bizimlə əlaqə",
+  "footer_follow": "Bizi izləyin",
+  "footer_rights": "Bütün hüquqlar qorunur.",
+  
+  "form_success": "Mesajınız uğurla göndərildi!",
+  "form_error": "Xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.",
+  
+  "search": "Axtar",
+  "loading": "Yüklənir...",
+  "no_results": "Nəticə tapılmadı"
+}

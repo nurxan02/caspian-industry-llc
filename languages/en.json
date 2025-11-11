@@ -1,0 +1,60 @@
+{
+  "nav_home": "Home",
+  "nav_about": "About",
+  "nav_news": "News",
+  "nav_projects": "Projects",
+  "nav_gallery": "Gallery",
+  "nav_partners": "Partners",
+  "nav_contact": "Contact",
+  "nav_faq": "FAQ",
+  
+  "hero_title": "Collaboration across borders",
+  "hero_subtitle": "Leading industrial supplier in the Caspian region",
+  "hero_cta": "Explore Our Services",
+  
+  "about_title": "About Caspian Industry",
+  "about_description": "We are a leading industrial supplier providing comprehensive solutions across the Caspian region.",
+  
+  "contact_title": "Get In Touch",
+  "contact_name": "Your Name",
+  "contact_email": "Email Address",
+  "contact_phone": "Phone Number",
+  "contact_subject": "Subject",
+  "contact_message": "Your Message",
+  "contact_send": "Send Message",
+  "contact_info": "Contact Information",
+  "contact_address": "Address",
+  
+  "news_title": "Latest News",
+  "news_read_more": "Read More",
+  "news_no_items": "No news available",
+  
+  "projects_title": "Our Projects",
+  "projects_view": "View Project",
+  "projects_no_items": "No projects available",
+  "projects_client": "Client",
+  "projects_location": "Location",
+  "projects_completed": "Completed",
+  
+  "gallery_title": "Gallery",
+  "gallery_no_items": "No images available",
+  
+  "partners_title": "Our Partners",
+  "partners_no_items": "No partners available",
+  
+  "faq_title": "Frequently Asked Questions",
+  "faq_no_items": "No questions available",
+  
+  "footer_about": "Caspian Industry is a leading supplier in the industrial sector, providing quality products and services.",
+  "footer_quick_links": "Quick Links",
+  "footer_contact": "Contact Us",
+  "footer_follow": "Follow Us",
+  "footer_rights": "All rights reserved.",
+  
+  "form_success": "Your message has been sent successfully!",
+  "form_error": "An error occurred. Please try again.",
+  
+  "search": "Search",
+  "loading": "Loading...",
+  "no_results": "No results found"
+}

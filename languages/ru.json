@@ -1,0 +1,60 @@
+{
+  "nav_home": "Главная",
+  "nav_about": "О нас",
+  "nav_news": "Новости",
+  "nav_projects": "Проекты",
+  "nav_gallery": "Галерея",
+  "nav_partners": "Партнёры",
+  "nav_contact": "Контакты",
+  "nav_faq": "FAQ",
+  
+  "hero_title": "Сотрудничество без границ",
+  "hero_subtitle": "Ведущий промышленный поставщик в Каспийском регионе",
+  "hero_cta": "Наши услуги",
+  
+  "about_title": "О компании Caspian Industry",
+  "about_description": "Мы являемся ведущим промышленным поставщиком, предоставляющим комплексные решения в Каспийском регионе.",
+  
+  "contact_title": "Свяжитесь с нами",
+  "contact_name": "Ваше имя",
+  "contact_email": "Email",
+  "contact_phone": "Телефон",
+  "contact_subject": "Тема",
+  "contact_message": "Ваше сообщение",
+  "contact_send": "Отправить",
+  "contact_info": "Контактная информация",
+  "contact_address": "Адрес",
+  
+  "news_title": "Последние новости",
+  "news_read_more": "Читать далее",
+  "news_no_items": "Нет новостей",
+  
+  "projects_title": "Наши проекты",
+  "projects_view": "Посмотреть проект",
+  "projects_no_items": "Нет проектов",
+  "projects_client": "Клиент",
+  "projects_location": "Местоположение",
+  "projects_completed": "Завершено",
+  
+  "gallery_title": "Галерея",
+  "gallery_no_items": "Нет изображений",
+  
+  "partners_title": "Наши партнёры",
+  "partners_no_items": "Нет партнёров",
+  
+  "faq_title": "Часто задаваемые вопросы",
+  "faq_no_items": "Нет вопросов",
+  
+  "footer_about": "Caspian Industry - ведущий поставщик в промышленном секторе, предоставляющий качественные продукты и услуги.",
+  "footer_quick_links": "Быстрые ссылки",
+  "footer_contact": "Свяжитесь с нами",
+  "footer_follow": "Мы в соцсетях",
+  "footer_rights": "Все права защищены.",
+  
+  "form_success": "Ваше сообщение успешно отправлено!",
+  "form_error": "Произошла ошибка. Пожалуйста, попробуйте снова.",
+  
+  "search": "Поиск",
+  "loading": "Загрузка...",
+  "no_results": "Результаты не найдены"
+}
