@@ -3,7 +3,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="<?php echo BASE_URL; ?>/assets/images/logo.svg" alt="<?php echo SITE_NAME; ?>" style="height: 60px; margin-bottom: 1rem;">
+                    <img src="<?php echo BASE_URL; ?>/assets/images/Font+Logo.svg" alt="<?php echo SITE_NAME; ?>" style="height: 78px; margin-bottom: 1rem;   filter: brightness(0) invert(1);">
                     <p><?php echo t('footer_about'); ?></p>
                     <div class="social-links">
                         <?php

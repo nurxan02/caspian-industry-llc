@@ -1,14 +1,13 @@
 <?php require_once 'includes/header.php'; ?>
 
 <!-- Hero Section - GitHub Style -->
-<section class="hero">
+<section class="hero section">
     <div class="hero-background"></div>
     <div class="container">
         <div class="hero-content">
             <div class="hero-text">
-                <span class="hero-tag">
-                    <span class="glow-dot"></span>
-                    Global Industrial Solutions
+                <span class="hero-br">
+                    <br>
                 </span>
                 <h1 class="hero-title">
                     Building the future of
@@ -44,7 +43,7 @@
                     <div class="stat-divider"></div>
                     <div class="stat-item">
                         <div class="stat-value glow-text">200+</div>
-                        <div class="stat-label">Global Clients</div>
+                        <div class="stat-label">Global <br> Clients</div>
                     </div>
                 </div>
             </div>

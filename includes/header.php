@@ -36,7 +36,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <nav class="navbar" id="navbar">
         <div class="navbar-container">
             <a href="<?php echo BASE_URL; ?>/index.php" class="navbar-logo">
-                <img src="<?php echo BASE_URL; ?>/assets/images/logo.svg" alt="<?php echo SITE_NAME; ?>">
+                <img src="<?php echo BASE_URL; ?>/assets/images/Font+Logo.svg" alt="<?php echo SITE_NAME; ?>">
             </a>
             
             <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
