@@ -12,11 +12,11 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $name = trim($_POST['name'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $phone = trim($_POST['phone'] ?? '');
-$subject = trim($_POST['subject'] ?? '');
+$subject = trim($_POST['subject'] ?? 'Contact Form');
 $message = trim($_POST['message'] ?? '');
 
 // Validation
-if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+if (empty($name) || empty($email) || empty($message)) {
     echo json_encode(['success' => false, 'message' => 'Please fill in all required fields']);
     exit;
 }

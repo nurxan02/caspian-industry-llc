@@ -114,7 +114,7 @@ function viewMessage(id, contact) {
         <div style="margin-bottom: var(--spacing-md);">
             <strong>Name:</strong> ${contact.name}<br>
             <strong>Email:</strong> <a href="mailto:${contact.email}">${contact.email}</a><br>
-            <strong>Phone:</strong> ${contact.phone || 'N/A'}<br>
+            
             <strong>Subject:</strong> ${contact.subject}<br>
             <strong>Date:</strong> ${new Date(contact.created_at).toLocaleString()}
         </div>
