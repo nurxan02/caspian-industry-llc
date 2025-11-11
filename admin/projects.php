@@ -21,7 +21,7 @@ if (isset($_GET['delete'])) {
     
     $stmt = $db->prepare("DELETE FROM projects WHERE id = ?");
     $stmt->execute([$id]);
-    header('Location: /admin/projects.php?deleted=1');
+    header('Location: ' . BASE_URL . '/admin/projects.php?deleted=1');
     exit;
 }
 
@@ -41,7 +41,7 @@ $projects = $stmt->fetchAll();
 <div class="admin-card">
     <div class="admin-card-header">
         <h3 class="admin-card-title">Projects</h3>
-        <a href="/admin/projects-edit.php" class="btn btn-primary btn-sm">
+        <a href="<?php echo BASE_URL; ?>/admin/projects-edit.php" class="btn btn-primary btn-sm">
             <i class="fas fa-plus"></i> Add New
         </a>
     </div>
@@ -76,7 +76,7 @@ $projects = $stmt->fetchAll();
                 </td>
                 <td>
                     <div class="action-buttons">
-                        <a href="/admin/projects-edit.php?id=<?php echo $project['id']; ?>" class="btn-icon btn-edit">
+                        <a href="<?php echo BASE_URL; ?>/admin/projects-edit.php?id=<?php echo $project['id']; ?>" class="btn-icon btn-edit">
                             <i class="fas fa-edit"></i>
                         </a>
                         <a href="?delete=<?php echo $project['id']; ?>" class="btn-icon btn-delete" onclick="return confirm('Are you sure?')">

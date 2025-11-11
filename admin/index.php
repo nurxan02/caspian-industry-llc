@@ -25,17 +25,17 @@ $unread_contacts = $db->query("SELECT COUNT(*) FROM contacts WHERE is_read = 0")
         </div>
     </div>
     
-    <div class="stat-card" style="background: linear-gradient(135deg, #3F6C96, #6BA8D6);">
+    <div class="stat-card" >
         <div class="stat-value"><?php echo $stats['news']; ?></div>
         <div class="stat-label"><i class="fas fa-newspaper"></i> News Articles</div>
     </div>
     
-    <div class="stat-card" style="background: linear-gradient(135deg, #2C5982, #3F6C96);">
+    <div class="stat-card" >
         <div class="stat-value"><?php echo $stats['projects']; ?></div>
         <div class="stat-label"><i class="fas fa-project-diagram"></i> Projects</div>
     </div>
     
-    <div class="stat-card" style="background: linear-gradient(135deg, #6BA8D6, #A0BBD0);">
+    <div class="stat-card" >
         <div class="stat-value"><?php echo $stats['partners']; ?></div>
         <div class="stat-label"><i class="fas fa-handshake"></i> Partners</div>
     </div>
@@ -45,7 +45,7 @@ $unread_contacts = $db->query("SELECT COUNT(*) FROM contacts WHERE is_read = 0")
 <div class="admin-card">
     <div class="admin-card-header">
         <h3 class="admin-card-title">Recent Contact Forms</h3>
-        <a href="/admin/contacts.php" class="btn btn-outline btn-sm">View All</a>
+        <a href="<?php echo BASE_URL; ?>/admin/contacts.php" class="btn btn-outline btn-sm">View All</a>
     </div>
     
     <table class="admin-table">
@@ -93,7 +93,7 @@ $unread_contacts = $db->query("SELECT COUNT(*) FROM contacts WHERE is_read = 0")
 <div class="admin-card">
     <div class="admin-card-header">
         <h3 class="admin-card-title">Recent News</h3>
-        <a href="/admin/news.php" class="btn btn-outline btn-sm">View All</a>
+        <a href="<?php echo BASE_URL; ?>/admin/news.php" class="btn btn-outline btn-sm">View All</a>
     </div>
     
     <table class="admin-table">
@@ -125,7 +125,7 @@ $unread_contacts = $db->query("SELECT COUNT(*) FROM contacts WHERE is_read = 0")
                         </td>
                         <td>
                             <div class="action-buttons">
-                                <a href="/admin/news-edit.php?id=<?php echo $item['id']; ?>" class="btn-icon btn-edit">
+                                <a href="<?php echo BASE_URL; ?>/admin/news-edit.php?id=<?php echo $item['id']; ?>" class="btn-icon btn-edit">
                                     <i class="fas fa-edit"></i>
                                 </a>
                             </div>

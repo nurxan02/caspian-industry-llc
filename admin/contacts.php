@@ -8,7 +8,7 @@ if (isset($_GET['delete'])) {
     $id = (int)$_GET['delete'];
     $stmt = $db->prepare("DELETE FROM contacts WHERE id = ?");
     $stmt->execute([$id]);
-    header('Location: /admin/contacts.php?deleted=1');
+    header('Location: ' . BASE_URL . '/admin/contacts.php?deleted=1');
     exit;
 }
 
@@ -17,7 +17,7 @@ if (isset($_GET['mark_read'])) {
     $id = (int)$_GET['mark_read'];
     $stmt = $db->prepare("UPDATE contacts SET is_read = 1 WHERE id = ?");
     $stmt->execute([$id]);
-    header('Location: /admin/contacts.php?marked=1');
+    header('Location: ' . BASE_URL . '/admin/contacts.php?marked=1');
     exit;
 }
 

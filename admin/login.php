@@ -3,7 +3,7 @@ require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/../includes/config.php';
 
 if (isAdmin()) {
-    header('Location: /admin/index.php');
+    header('Location: ' . BASE_URL . '/admin/index.php');
     exit;
 }
 
@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? '';
     
     if (adminLogin($username, $password)) {
-        header('Location: /admin/index.php');
+        header('Location: ' . BASE_URL . '/admin/index.php');
         exit;
     } else {
         $error = 'Invalid username or password';
@@ -35,14 +35,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/admin.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/admin.css">
 </head>
 <body>
     <div class="login-wrapper">
         <div class="login-box">
             <div class="login-logo">
-                <img src="/assets/images/logo.svg" alt="<?php echo SITE_NAME; ?>">
+                <img src="<?php echo BASE_URL; ?>/assets/images/logo.svg" alt="<?php echo SITE_NAME; ?>">
                 <h2>Admin Panel</h2>
                 <p style="color: var(--text-secondary); margin-top: 0.5rem;">Sign in to continue</p>
             </div>
@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
             
             <div style="text-align: center; margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid rgba(107, 168, 214, 0.1);">
-                <a href="/" style="color: var(--text-secondary); font-size: 0.875rem;">
+                <a href="<?php echo BASE_URL; ?>/" style="color: var(--text-secondary); font-size: 0.875rem;">
                     <i class="fas fa-arrow-left"></i> Back to Website
                 </a>
             </div>

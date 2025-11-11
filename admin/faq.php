@@ -8,7 +8,7 @@ if (isset($_GET['delete'])) {
     $id = (int)$_GET['delete'];
     $stmt = $db->prepare("DELETE FROM faq WHERE id = ?");
     $stmt->execute([$id]);
-    header('Location: /admin/faq.php?deleted=1');
+    header('Location: ' . BASE_URL . '/admin/faq.php?deleted=1');
     exit;
 }
 
@@ -28,7 +28,7 @@ $faqs = $stmt->fetchAll();
 <div class="admin-card">
     <div class="admin-card-header">
         <h3 class="admin-card-title">Frequently Asked Questions</h3>
-        <a href="/admin/faq-edit.php" class="btn btn-primary btn-sm">
+        <a href="<?php echo BASE_URL; ?>/admin/faq-edit.php" class="btn btn-primary btn-sm">
             <i class="fas fa-plus"></i> Add New
         </a>
     </div>
@@ -51,7 +51,7 @@ $faqs = $stmt->fetchAll();
                 <td><?php echo htmlspecialchars(substr($faq['answer_en'], 0, 100)); ?>...</td>
                 <td>
                     <div class="action-buttons">
-                        <a href="/admin/faq-edit.php?id=<?php echo $faq['id']; ?>" class="btn-icon btn-edit">
+                        <a href="<?php echo BASE_URL; ?>/admin/faq-edit.php?id=<?php echo $faq['id']; ?>" class="btn-icon btn-edit">
                             <i class="fas fa-edit"></i>
                         </a>
                         <a href="?delete=<?php echo $faq['id']; ?>" class="btn-icon btn-delete" onclick="return confirm('Are you sure?')">

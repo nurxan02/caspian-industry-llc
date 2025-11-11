@@ -16,7 +16,7 @@ if (isset($_GET['delete'])) {
     
     $stmt = $db->prepare("DELETE FROM gallery WHERE id = ?");
     $stmt->execute([$id]);
-    header('Location: /admin/gallery.php?deleted=1');
+    header('Location: ' . BASE_URL . '/admin/gallery.php?deleted=1');
     exit;
 }
 
@@ -36,7 +36,7 @@ $items = $stmt->fetchAll();
 <div class="admin-card">
     <div class="admin-card-header">
         <h3 class="admin-card-title">Gallery</h3>
-        <a href="/admin/gallery-edit.php" class="btn btn-primary btn-sm">
+        <a href="<?php echo BASE_URL; ?>/admin/gallery-edit.php" class="btn btn-primary btn-sm">
             <i class="fas fa-plus"></i> Add New
         </a>
     </div>
@@ -46,7 +46,7 @@ $items = $stmt->fetchAll();
         <?php foreach ($items as $item): ?>
         <div class="card" style="position: relative;">
             <?php if ($item['image']): ?>
-                <img src="/assets/uploads/<?php echo $item['image']; ?>" class="card-image" style="height: 200px; object-fit: cover;">
+                <img src="<?php echo BASE_URL; ?>/assets/uploads/<?php echo $item['image']; ?>" class="card-image" style="height: 200px; object-fit: cover;">
             <?php else: ?>
                 <div style="height: 200px; background: var(--bg-card); display: flex; align-items: center; justify-content: center;">
                     <i class="fas fa-image" style="font-size: 3rem; color: var(--text-muted);"></i>
@@ -58,7 +58,7 @@ $items = $stmt->fetchAll();
                     <?php echo htmlspecialchars(substr($item['description_en'], 0, 60)); ?>...
                 </p>
                 <div class="action-buttons" style="justify-content: center;">
-                    <a href="/admin/gallery-edit.php?id=<?php echo $item['id']; ?>" class="btn-icon btn-edit">
+                    <a href="<?php echo BASE_URL; ?>/admin/gallery-edit.php?id=<?php echo $item['id']; ?>" class="btn-icon btn-edit">
                         <i class="fas fa-edit"></i>
                     </a>
                     <a href="?delete=<?php echo $item['id']; ?>" class="btn-icon btn-delete" onclick="return confirm('Are you sure?')">

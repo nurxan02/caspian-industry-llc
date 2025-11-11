@@ -384,16 +384,35 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 80px;
+  padding: 80px 0 60px;
   overflow: hidden;
   background: var(--bg-primary);
   width: 100%;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.07;
+  z-index: 0;
+}
+
 .hero .container {
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 1280px;
+  padding: 0 var(--spacing-2xl);
   box-sizing: border-box;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-background {
@@ -402,7 +421,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 0;
+  z-index: 1;
   opacity: 0.4;
 }
 
@@ -438,7 +457,7 @@ a:hover {
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   display: flex;
   flex-direction: row;
   gap: var(--spacing-4xl);
@@ -810,7 +829,7 @@ a:hover {
 
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1.3fr;
   gap: var(--spacing-3xl);
   margin-bottom: var(--spacing-2xl);
 }
@@ -1136,6 +1155,7 @@ textarea.form-control {
   height: 200px;
   background: linear-gradient(to bottom, transparent, var(--bg-primary));
   pointer-events: none;
+  z-index: 1;
 }
 
 /* Features Grid */
@@ -1598,7 +1618,7 @@ textarea.form-control {
   }
 
   .hero .container {
-    padding: 0 1.5rem;
+    padding: 0 2rem;
     box-sizing: border-box;
   }
 
@@ -1619,6 +1639,10 @@ textarea.form-control {
   .hero-globe {
     max-width: 100%;
     order: 2;
+  }
+
+  #globeViz {
+    transform: scale(0.95);
   }
 
   .hero-title {
@@ -1677,7 +1701,7 @@ textarea.form-control {
   }
 
   .hero .container {
-    padding: 0 1.5rem;
+    padding: 0 2rem;
     box-sizing: border-box;
   }
 
@@ -1692,6 +1716,16 @@ textarea.form-control {
     max-width: 100%;
     text-align: center;
     order: 1;
+  }
+
+  .hero-globe {
+    max-width: 100%;
+    order: 2;
+    padding: 0;
+  }
+
+  #globeViz {
+    transform: scale(0.9);
   }
 
   .hero-globe {
@@ -1772,6 +1806,11 @@ textarea.form-control {
     max-width: 100vw;
   }
 
+  .hero::before {
+    background-attachment: scroll;
+    opacity: 0.2;
+  }
+
   .container {
     padding: 0 1rem;
     overflow-x: hidden;
@@ -1818,6 +1857,14 @@ textarea.form-control {
     max-width: 100%;
     width: 100%;
     order: 2;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+
+  #globeViz {
+    transform: scale(0.85);
+    transform-origin: center center;
   }
 
   .hero-title {
@@ -1841,6 +1888,12 @@ textarea.form-control {
     height: 300px;
     max-width: 100%;
     width: 100%;
+    min-height: 300px;
+  }
+
+  #globeViz canvas {
+    max-width: 100% !important;
+    height: auto !important;
   }
 
   .hero-buttons {

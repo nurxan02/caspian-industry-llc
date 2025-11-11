@@ -3,7 +3,7 @@ require_once __DIR__ . '/../includes/config.php';
 
 function requireAdmin() {
     if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
-        header('Location: /admin/login.php');
+        header('Location: ' . BASE_URL . '/admin/login.php');
         exit;
     }
 }

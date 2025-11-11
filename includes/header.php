@@ -30,6 +30,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <!-- Globe.gl for globe visualization -->
     <script src="https://unpkg.com/three"></script>
     <script src="https://unpkg.com/globe.gl"></script>
+    <!-- <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script> -->
 </head>
 <body>
     <!-- Navigation -->

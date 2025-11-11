@@ -7,7 +7,7 @@
         <div class="contact-form-wrapper">
             <h1 class="contact-title">We're here to help</h1>
             
-            <form id="contactForm" action="/includes/contact-handler.php" method="POST" class="modern-contact-form">
+            <form id="contactForm" action="<?php echo BASE_URL; ?>/includes/contact-handler.php" method="POST" class="modern-contact-form">
                 <div class="form-group">
                     <label class="form-label">Name</label>
                     <input type="text" name="name" class="form-control" placeholder="e.g. John Smith" required>

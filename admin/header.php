@@ -4,7 +4,7 @@ require_once __DIR__ . '/../includes/database.php';
 
 if (isset($_GET['logout'])) {
     adminLogout();
-    header('Location: /admin/login.php');
+    header('Location: ' . BASE_URL . '/admin/login.php');
     exit;
 }
 
@@ -26,41 +26,41 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Admin Stylesheet -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/admin.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/admin.css">
 </head>
 <body>
     <div class="admin-wrapper">
         <!-- Sidebar -->
         <aside class="admin-sidebar">
             <div class="admin-logo">
-                <img src="/assets/images/logo.svg" alt="<?php echo SITE_NAME; ?>" style="height: 40px;">
+                <img src="<?php echo BASE_URL; ?>/assets/images/logo.svg" alt="<?php echo SITE_NAME; ?>" style="height: 40px;">
                 <span>Admin Panel</span>
             </div>
             
             <nav class="admin-nav">
-                <a href="/admin/index.php" class="admin-nav-item <?php echo $current_page == 'index' ? 'active' : ''; ?>">
+                <a href="<?php echo BASE_URL; ?>/admin/index.php" class="admin-nav-item <?php echo $current_page == 'index' ? 'active' : ''; ?>">
                     <i class="fas fa-chart-line"></i> Dashboard
                 </a>
-                <a href="/admin/contacts.php" class="admin-nav-item <?php echo $current_page == 'contacts' ? 'active' : ''; ?>">
+                <a href="<?php echo BASE_URL; ?>/admin/contacts.php" class="admin-nav-item <?php echo $current_page == 'contacts' ? 'active' : ''; ?>">
                     <i class="fas fa-envelope"></i> Contact Forms
                 </a>
-                <a href="/admin/news.php" class="admin-nav-item <?php echo $current_page == 'news' ? 'active' : ''; ?>">
+                <a href="<?php echo BASE_URL; ?>/admin/news.php" class="admin-nav-item <?php echo $current_page == 'news' ? 'active' : ''; ?>">
                     <i class="fas fa-newspaper"></i> News
                 </a>
-                <a href="/admin/projects.php" class="admin-nav-item <?php echo $current_page == 'projects' ? 'active' : ''; ?>">
+                <a href="<?php echo BASE_URL; ?>/admin/projects.php" class="admin-nav-item <?php echo $current_page == 'projects' ? 'active' : ''; ?>">
                     <i class="fas fa-project-diagram"></i> Projects
                 </a>
-                <a href="/admin/gallery.php" class="admin-nav-item <?php echo $current_page == 'gallery' ? 'active' : ''; ?>">
+                <a href="<?php echo BASE_URL; ?>/admin/gallery.php" class="admin-nav-item <?php echo $current_page == 'gallery' ? 'active' : ''; ?>">
                     <i class="fas fa-images"></i> Gallery
                 </a>
-                <a href="/admin/partners.php" class="admin-nav-item <?php echo $current_page == 'partners' ? 'active' : ''; ?>">
+                <a href="<?php echo BASE_URL; ?>/admin/partners.php" class="admin-nav-item <?php echo $current_page == 'partners' ? 'active' : ''; ?>">
                     <i class="fas fa-handshake"></i> Partners
                 </a>
-                <a href="/admin/faq.php" class="admin-nav-item <?php echo $current_page == 'faq' ? 'active' : ''; ?>">
+                <a href="<?php echo BASE_URL; ?>/admin/faq.php" class="admin-nav-item <?php echo $current_page == 'faq' ? 'active' : ''; ?>">
                     <i class="fas fa-question-circle"></i> FAQ
                 </a>
-                <a href="/admin/settings.php" class="admin-nav-item <?php echo $current_page == 'settings' ? 'active' : ''; ?>">
+                <a href="<?php echo BASE_URL; ?>/admin/settings.php" class="admin-nav-item <?php echo $current_page == 'settings' ? 'active' : ''; ?>">
                     <i class="fas fa-cog"></i> Settings
                 </a>
             </nav>
@@ -81,7 +81,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
             <div class="admin-header">
                 <h1><?php echo ucfirst(str_replace('-', ' ', $current_page)); ?></h1>
                 <div>
-                    <a href="/" target="_blank" class="btn btn-outline">
+                    <a href="<?php echo BASE_URL; ?>/" target="_blank" class="btn btn-outline">
                         <i class="fas fa-external-link-alt"></i> View Site
                     </a>
                 </div>

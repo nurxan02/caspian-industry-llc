@@ -16,7 +16,7 @@ if (isset($_GET['delete'])) {
     
     $stmt = $db->prepare("DELETE FROM partners WHERE id = ?");
     $stmt->execute([$id]);
-    header('Location: /admin/partners.php?deleted=1');
+    header('Location: ' . BASE_URL . '/admin/partners.php?deleted=1');
     exit;
 }
 
@@ -36,7 +36,7 @@ $partners = $stmt->fetchAll();
 <div class="admin-card">
     <div class="admin-card-header">
         <h3 class="admin-card-title">Partners</h3>
-        <a href="/admin/partners-edit.php" class="btn btn-primary btn-sm">
+        <a href="<?php echo BASE_URL; ?>/admin/partners-edit.php" class="btn btn-primary btn-sm">
             <i class="fas fa-plus"></i> Add New
         </a>
     </div>
@@ -58,7 +58,7 @@ $partners = $stmt->fetchAll();
                 <td><?php echo $partner['sort_order']; ?></td>
                 <td>
                     <?php if ($partner['logo']): ?>
-                        <img src="/assets/uploads/<?php echo $partner['logo']; ?>" style="width: 80px; height: 40px; object-fit: contain;">
+                        <img src="<?php echo BASE_URL; ?>/assets/uploads/<?php echo $partner['logo']; ?>" style="width: 80px; height: 40px; object-fit: contain;">
                     <?php else: ?>
                         <div style="width: 80px; height: 40px; background: var(--bg-card); border-radius: 4px; display: flex; align-items: center; justify-content: center;">
                             <i class="fas fa-image" style="color: var(--text-muted);"></i>
@@ -77,7 +77,7 @@ $partners = $stmt->fetchAll();
                 </td>
                 <td>
                     <div class="action-buttons">
-                        <a href="/admin/partners-edit.php?id=<?php echo $partner['id']; ?>" class="btn-icon btn-edit">
+                        <a href="<?php echo BASE_URL; ?>/admin/partners-edit.php?id=<?php echo $partner['id']; ?>" class="btn-icon btn-edit">
                             <i class="fas fa-edit"></i>
                         </a>
                         <a href="?delete=<?php echo $partner['id']; ?>" class="btn-icon btn-delete" onclick="return confirm('Are you sure?')">

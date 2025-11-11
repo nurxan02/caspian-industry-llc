@@ -237,7 +237,8 @@
         </div>
     </div>
 </section>
-
+    <script src="https://unpkg.com/three"></script>
+    <script src="https://unpkg.com/globe.gl"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const locations = [

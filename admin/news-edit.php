@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
     }
     
-    header('Location: /admin/news.php?saved=1');
+    header('Location: ' . BASE_URL . '/admin/news.php?saved=1');
     exit;
 }
 ?>
@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="admin-card">
     <div class="admin-card-header">
         <h3 class="admin-card-title"><?php echo $id ? 'Edit' : 'Add'; ?> News</h3>
-        <a href="/admin/news.php" class="btn btn-outline btn-sm">
+        <a href="<?php echo BASE_URL; ?>/admin/news.php" class="btn btn-outline btn-sm">
             <i class="fas fa-arrow-left"></i> Back
         </a>
     </div>
@@ -168,7 +168,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 <?php if (!empty($news['image'])): ?>
                     <div class="image-preview">
-                        <img src="/assets/uploads/<?php echo $news['image']; ?>" alt="Current image">
+                        <img src="<?php echo BASE_URL; ?>/assets/uploads/<?php echo $news['image']; ?>" alt="Current image">
                     </div>
                 <?php endif; ?>
             </div>
@@ -190,7 +190,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit" class="btn btn-primary">
                 <i class="fas fa-save"></i> Save News
             </button>
-            <a href="/admin/news.php" class="btn btn-outline">Cancel</a>
+            <a href="<?php echo BASE_URL; ?>/admin/news.php" class="btn btn-outline">Cancel</a>
         </div>
     </form>
 </div>

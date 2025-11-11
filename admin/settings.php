@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute([$key, $value]);
     }
     
-    header('Location: /admin/settings.php?saved=1');
+    header('Location: ' . BASE_URL . '/admin/settings.php?saved=1');
     exit;
 }
 
