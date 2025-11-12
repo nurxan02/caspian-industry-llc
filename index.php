@@ -1,8 +1,8 @@
 <?php require_once 'includes/header.php'; ?>
 
 <!-- Hero Section - GitHub Style -->
-<section class="hero section">
-    <div class="hero-background"></div>
+<section class="hero section" id="hero-section">
+    <div class="hero-background" id="vanta-bg"></div>
     <div class="container">
         <div class="hero-content">
             <div class="hero-text">
@@ -46,10 +46,6 @@
                         <div class="stat-label">Global <br> Clients</div>
                     </div>
                 </div>
-            </div>
-            <div class="hero-globe">
-                <div class="globe-glow"></div>
-                <div id="globeViz"></div>
             </div>
         </div>
     </div>
@@ -354,85 +350,32 @@
 </section>
 
 <script>
-// Initialize globe with default locations
-document.addEventListener('DOMContentLoaded', function() {
-      
-    const locations = [
-        // Azerbaijan
-        { lat: 40.4093, lng: 49.8671, name: 'BAKU' },
-        
-        // Major European Cities
-        { lat: 51.5074, lng: -0.1278, name: 'LONDON' },
-        { lat: 48.8566, lng: 2.3522, name: 'PARIS' },
-        { lat: 52.5200, lng: 13.4050, name: 'BERLIN' },
-        { lat: 41.9028, lng: 12.4964, name: 'ROME' },
-        { lat: 40.4168, lng: -3.7038, name: 'MADRID' },
-        { lat: 55.7558, lng: 37.6173, name: 'MOSCOW' },
-        { lat: 48.2082, lng: 16.3738, name: 'VIENNA' },
-        { lat: 59.3293, lng: 18.0686, name: 'STOCKHOLM' },
-        
-        // Caucasus & Neighbors
-        { lat: 41.7151, lng: 44.8271, name: 'TBILISI' },
-        { lat: 35.6892, lng: 51.3890, name: 'TEHRAN' },
-        { lat: 41.0082, lng: 28.9784, name: 'ISTANBUL' },
-        
-        // Major Asian Cities
-        { lat: 39.9042, lng: 116.4074, name: 'BEIJING' },
-        { lat: 35.6762, lng: 139.6503, name: 'TOKYO' },
-        { lat: 37.5665, lng: 126.9780, name: 'SEOUL' },
-        { lat: 1.3521, lng: 103.8198, name: 'SINGAPORE' },
-        { lat: 22.3193, lng: 114.1694, name: 'HONG KONG' },
-        { lat: 25.2048, lng: 55.2708, name: 'DUBAI' },
-        { lat: 28.6139, lng: 77.2090, name: 'NEW DELHI' },
-        { lat: 13.7563, lng: 100.5018, name: 'BANGKOK' },
-        
-        // North America
-        { lat: 40.7128, lng: -74.0060, name: 'NEW YORK' },
-        { lat: 34.0522, lng: -118.2437, name: 'LOS ANGELES' },
-        { lat: 41.8781, lng: -87.6298, name: 'CHICAGO' },
-        { lat: 43.6532, lng: -79.3832, name: 'TORONTO' },
-        { lat: 19.4326, lng: -99.1332, name: 'MEXICO CITY' },
-        
-        // South America
-        { lat: -23.5505, lng: -46.6333, name: 'SAO PAULO' },
-        { lat: -34.6037, lng: -58.3816, name: 'BUENOS AIRES' },
-        { lat: -12.0464, lng: -77.0428, name: 'LIMA' },
-        { lat: 4.7110, lng: -74.0721, name: 'BOGOTA' },
-        
-        // Australia & Oceania
-        { lat: -33.8688, lng: 151.2093, name: 'SYDNEY' },
-        { lat: -37.8136, lng: 144.9631, name: 'MELBOURNE' },
-        { lat: -27.4698, lng: 153.0251, name: 'BRISBANE' }
-    ];
-    
-    const arcs = [
-        // From Baku to major European capitals
-        { startLat: 40.4093, startLng: 49.8671, endLat: 51.5074, endLng: -0.1278 }, // London
-        { startLat: 40.4093, startLng: 49.8671, endLat: 48.8566, endLng: 2.3522 },   // Paris
-        { startLat: 40.4093, startLng: 49.8671, endLat: 52.5200, endLng: 13.4050 },  // Berlin
-        { startLat: 40.4093, startLng: 49.8671, endLat: 41.9028, endLng: 12.4964 },  // Rome
-        { startLat: 40.4093, startLng: 49.8671, endLat: 55.7558, endLng: 37.6173 },  // Moscow
-        
-        // From Baku to major Asian capitals
-        { startLat: 40.4093, startLng: 49.8671, endLat: 39.9042, endLng: 116.4074 }, // Beijing
-        { startLat: 40.4093, startLng: 49.8671, endLat: 35.6762, endLng: 139.6503 }, // Tokyo
-        { startLat: 40.4093, startLng: 49.8671, endLat: 25.2048, endLng: 55.2708 },  // Dubai
-        { startLat: 40.4093, startLng: 49.8671, endLat: 1.3521, endLng: 103.8198 },  // Singapore
-        
-        // From Baku to Americas
-        { startLat: 40.4093, startLng: 49.8671, endLat: 40.7128, endLng: -74.0060 }, // New York
-        { startLat: 40.4093, startLng: 49.8671, endLat: -23.5505, endLng: -46.6333 }, // Sao Paulo
-        
-        // From Baku to Australia
-        { startLat: 40.4093, startLng: 49.8671, endLat: -33.8688, endLng: 151.2093 }, // Sydney
-        
-        // Neighboring countries
-        { startLat: 40.4093, startLng: 49.8671, endLat: 41.7151, endLng: 44.8271 },  // Tbilisi
-        { startLat: 40.4093, startLng: 49.8671, endLat: 35.6892, endLng: 51.3890 },  // Tehran
-        { startLat: 40.4093, startLng: 49.8671, endLat: 41.0082, endLng: 28.9784 }   // Istanbul
-    ];
-    
-    initGlobe('globeViz', locations, arcs);
+// Initialize Vanta.js NET effect
+let vantaEffect = null;
+
+if (window.VANTA && window.THREE) {
+    vantaEffect = VANTA.NET({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x58a6ff,
+        backgroundColor: 0x1d2735,
+        points: 10.00,
+        maxDistance: 20.00,
+        spacing: 15.00,
+        showDots: true,
+        backgroundAlpha: 0.2
+    });
+}
+
+// Clean up on page unload
+window.addEventListener('beforeunload', function() {
+    if (vantaEffect) vantaEffect.destroy();
 });
 </script>
 

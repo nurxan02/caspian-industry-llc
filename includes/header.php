@@ -27,10 +27,11 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/style.css">
     
-    <!-- Globe.gl for globe visualization -->
-    <script src="https://unpkg.com/three"></script>
-    <script src="https://unpkg.com/globe.gl"></script>
-    <!-- <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script> -->
+    <!-- Three.js for 3D effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    
+    <!-- Vanta.js NET Effect -->
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
