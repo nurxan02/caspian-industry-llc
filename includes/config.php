@@ -7,8 +7,8 @@ define('SITE_NAME', 'Caspian Industry');
 define('DEFAULT_LANG', 'en');
 define('AVAILABLE_LANGS', ['en', 'ru', 'az']);
 
-// Base URL configuration - MAMP
-define('BASE_URL', '/caspianindustry');
+// Base URL configuration - PHP built-in server
+define('BASE_URL', '');
 
 // Upload directories
 define('UPLOAD_DIR', __DIR__ . '/../assets/uploads/');

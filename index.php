@@ -356,19 +356,18 @@ let vantaEffect = null;
 if (window.VANTA && window.THREE) {
     vantaEffect = VANTA.NET({
         el: "#vanta-bg",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x58a6ff,
-        backgroundColor: 0x1d2735,
-        points: 10.00,
-        maxDistance: 20.00,
-        spacing: 15.00,
-        showDots: true,
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x32607a,
+  backgroundColor: 0x161b34,
+  points: 5.00,
+  maxDistance: 22.00,
+  spacing: 16.00,
         backgroundAlpha: 0.2
     });
 }
