@@ -25,7 +25,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/style.css?v=<?php echo time(); ?>">
     
     <!-- Three.js for 3D effects -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
@@ -38,10 +38,13 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <nav class="navbar" id="navbar">
         <div class="navbar-container">
             <a href="<?php echo BASE_URL; ?>/index.php" class="navbar-logo">
-                <img src="<?php echo BASE_URL; ?>/assets/images/Font+Logo.svg" alt="<?php echo SITE_NAME; ?>">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="<?php echo BASE_URL; ?>/assets/images/logo.svg">
+                    <img src="<?php echo BASE_URL; ?>/assets/images/Font+Logo.svg" alt="<?php echo SITE_NAME; ?>">
+                </picture>
             </a>
             
-            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -76,3 +79,20 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
             </div>
         </div>
     </nav>
+
+    <!-- Apple-style Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+        <div class="mobile-menu-panel" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
+            <ul class="mobile-menu-links">
+                <li><a href="<?php echo BASE_URL; ?>/index.php">Home</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/news.php">News</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/projects.php">Projects</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/about.php">About</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/partners.php">Partners</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/gallery.php">Gallery</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/faq.php">FAQ</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/contact.php">Contact</a></li>
+            </ul>
+        </div>
+    </div>

@@ -170,15 +170,6 @@ a:hover {
     padding: 0 var(--spacing-lg);
     margin: 0 auto;
   }
-
-  /* Mobile logo sizing and spacing */
-  .navbar-logo {
-    padding: 10px 10px 10px 10px !important;
-    border-radius: 16px;
-  }
-  .navbar-logo img {
-    height: 28px;
-  }
 }
 
 /* Navbar - GitHub Style Dark */
@@ -192,11 +183,6 @@ a:hover {
   z-index: 1000;
   transition: all var(--transition-normal);
   padding: var(--spacing-lg) 0;
-}
-
-/* Hide mobile menu on desktop by default */
-.mobile-menu {
-  display: none;
 }
 
 .navbar.scrolled {
@@ -256,10 +242,9 @@ a:hover {
 }
 
 .navbar-logo img {
-  height: 40px;
+  height: 48px;
   width: auto;
   filter: brightness(0) invert(1);
-  display: block;
 }
 
 .navbar-center {
@@ -409,7 +394,7 @@ a:hover {
   backdrop-filter: blur(40px) saturate(150%);
   -webkit-backdrop-filter: blur(40px) saturate(150%);
   border: 1px solid rgba(88, 166, 255, 0.2);
-  border-radius: 14px;
+  border-radius: 12px;
   cursor: pointer;
   padding: 12px;
   width: 48px;
@@ -436,8 +421,8 @@ a:hover {
 
 .navbar-toggle span {
   display: block;
-  width: 24px;
-  height: 3px;
+  width: 22px;
+  height: 2.5px;
   background: var(--text-white);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 2px;
@@ -445,7 +430,7 @@ a:hover {
 }
 
 .navbar-toggle span:nth-child(1) {
-  top: 15px;
+  top: 14px;
 }
 
 .navbar-toggle span:nth-child(2) {
@@ -454,7 +439,7 @@ a:hover {
 }
 
 .navbar-toggle span:nth-child(3) {
-  bottom: 15px;
+  bottom: 14px;
 }
 
 .navbar-toggle.active span:nth-child(1) {
@@ -465,14 +450,6 @@ a:hover {
 .navbar-toggle.active span:nth-child(2) {
   opacity: 0;
   transform: translateY(-50%) scale(0);
-}
-
-.navbar-toggle.active {
-  border-color: rgba(88, 166, 255, 0.45);
-  box-shadow: 0 12px 48px rgba(31, 111, 235, 0.28),
-    0 0 0 4px rgba(88, 166, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15),
-    inset 0 -1px 0 rgba(88, 166, 255, 0.2);
-  background: rgba(31, 111, 235, 0.12);
 }
 
 .navbar-toggle.active span:nth-child(3) {
@@ -1121,19 +1098,7 @@ a:hover {
   }
 
   .navbar-toggle {
-    display: flex; /* keep visible on mobile */
-    position: static; /* stay in original navbar flow */
-    top: auto;
-    right: auto;
-    z-index: 1001; /* default button z-index */
-  }
-
-  /* Hide legacy centered desktop nav on mobile; we'll use Apple-style full-screen menu */
-  .navbar-center {
-    display: none !important;
-  }
-  .navbar-actions {
-    display: none !important;
+    display: flex;
   }
 
   .navbar-center {
@@ -1178,8 +1143,10 @@ a:hover {
     gap: 8px !important;
     padding: 24px !important;
     margin: 0 !important;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
-      0 8px 32px rgba(31, 111, 235, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    box-shadow: 
+      0 20px 60px rgba(0, 0, 0, 0.5),
+      0 8px 32px rgba(31, 111, 235, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
       inset 0 -1px 0 rgba(88, 166, 255, 0.1) !important;
     transform: scale(0.9) translateY(-30px) !important;
     opacity: 0 !important;
@@ -1244,8 +1211,10 @@ a:hover {
     -webkit-backdrop-filter: blur(40px) saturate(150%);
     border: 1px solid rgba(88, 166, 255, 0.3);
     border-radius: 50px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
-      0 8px 32px rgba(31, 111, 235, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: 
+      0 20px 60px rgba(0, 0, 0, 0.5),
+      0 8px 32px rgba(31, 111, 235, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1286,128 +1255,6 @@ a:hover {
 
   .footer-content {
     grid-template-columns: 1fr;
-  }
-}
-
-/* Apple-style full-screen mobile menu */
-@media (max-width: 768px) {
-  .mobile-menu {
-    display: block;
-    position: fixed;
-    inset: 0;
-    z-index: 3000;
-    pointer-events: none;
-  }
-  .mobile-menu-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    opacity: 0;
-    transition: opacity 0.25s ease;
-  }
-  .mobile-menu-panel {
-    position: absolute;
-    top: 12px;
-    bottom: 12px;
-    left: 12px;
-    right: 12px;
-    background: rgba(13, 17, 23, 0.65);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 18px;
-    color: #e6edf3;
-    backdrop-filter: blur(26px) saturate(140%);
-    -webkit-backdrop-filter: blur(26px) saturate(140%);
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45),
-      0 8px 24px rgba(31, 111, 235, 0.18);
-    transform: translateY(-12px);
-    opacity: 0;
-    transition: transform 0.25s ease, opacity 0.25s ease;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    outline: none;
-    padding: calc(env(safe-area-inset-top, 0px) + 12px) 14px 14px;
-  }
-  .mobile-menu.is-open {
-    pointer-events: auto;
-  }
-  .mobile-menu.is-open .mobile-menu-overlay {
-    opacity: 1;
-  }
-  .mobile-menu.is-open .mobile-menu-panel {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  .mobile-menu-header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 12px;
-    padding: 4px 2px 12px;
-  }
-  /* logo removed */
-  .mobile-menu-close {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    color: #e6edf3;
-    border-radius: 999px;
-    padding: 8px 14px;
-    font-weight: 600;
-    cursor: pointer;
-    backdrop-filter: blur(18px);
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-  }
-  .mobile-menu-close:active {
-    transform: translateY(1px);
-  }
-  .mobile-menu-welcome {
-    font-weight: 700;
-    text-align: center;
-    margin: 6px 0 12px;
-    color: #e6edf3;
-  }
-
-  /* search removed */
-
-  .mobile-menu-links {
-    list-style: none;
-    margin: 28px 0 0;
-    padding: 0;
-  }
-  .mobile-menu-links li {
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-  }
-  .mobile-menu-links li:first-child {
-    border-top: none;
-  }
-  .mobile-menu-links a {
-    display: block;
-    padding: 16px 10px;
-    font-size: 20px;
-    line-height: 1.35;
-    color: #e6edf3;
-    text-decoration: none;
-    border-radius: 12px;
-  }
-  .mobile-menu-links a:active {
-    background: rgba(255, 255, 255, 0.06);
-  }
-
-  /* Keep burger above the glass panel when menu is open */
-  .navbar-toggle.active {
-    z-index: 4000;
-  }
-
-  /* Raise navbar only while menu is open so toggle stays above overlay/panel */
-  body.menu-open .navbar {
-    z-index: 3500 !important;
-  }
-  /* Hide logo and language controls while the panel is open */
-  body.menu-open .navbar-logo,
-  body.menu-open .navbar-actions {
-    opacity: 0;
-    pointer-events: none;
   }
 }
 
@@ -1987,7 +1834,15 @@ textarea.form-control {
   .navbar-container {
     padding: 0 var(--spacing-lg);
   }
-  /* Keep layout padding on medium screens; visibility handled by explicit ≤768 and ≥769 queries */
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-center,
+  .navbar-actions {
+    display: none;
+  }
 
   .container {
     padding: 0 var(--spacing-lg);
@@ -2051,35 +1906,6 @@ textarea.form-control {
     width: 100%;
     justify-content: center;
   }
-}
-
-/* Force-hide burger on desktop widths to prevent accidental display */
-@media (min-width: 769px) {
-  .navbar-toggle {
-    display: none !important;
-  }
-}
-
-/* Tablet layout tweaks (iPad and similar widths) */
-@media (min-width: 769px) and (max-width: 1026px) {
-  /* Prevent the centered nav pill from colliding with logo and language switcher */
-  .navbar-center {
-    width: calc(100% - 320px); /* reserve space left/right */
-  }
-
-  /* Slightly compact side elements to gain room */
-  .navbar-logo { padding: 8px 10px; border-radius: 24px; }
-  .navbar-logo img { height: 32px; }
-
-  .language-switcher a {
-    padding: 6px 10px;
-    min-width: 36px;
-    font-size: 0.8rem;
-  }
-
-  /* Tighten the middle pill so it never overflows */
-  .navbar-menu { gap: 8px; padding: 6px; width: 100%; justify-content: space-evenly; }
-  .navbar-menu li a { padding: 8px 12px; font-size: 0.95rem; }
 }
 
 @media (max-width: 940px) {
