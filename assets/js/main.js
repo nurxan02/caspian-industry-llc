@@ -21,35 +21,39 @@ document.addEventListener("DOMContentLoaded", function () {
   // New Apple-style elements
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileOverlay = document.getElementById("mobile-menu-overlay");
-  const mobilePanel = mobileMenu ? mobileMenu.querySelector('.mobile-menu-panel') : null;
+  const mobilePanel = mobileMenu
+    ? mobileMenu.querySelector(".mobile-menu-panel")
+    : null;
   const mobileClose = document.getElementById("mobile-menu-close");
 
-  console.log('Mobile menu elements:', {
+  console.log("Mobile menu elements:", {
     navbarToggle,
     navbarMenu,
     navbarCenter,
-    navbarActions
+    navbarActions,
   });
 
   function openAppleMenu() {
     if (!mobileMenu) return;
-    navbarToggle.classList.add('active');
-    navbarToggle.setAttribute('aria-expanded', 'true');
-    mobileMenu.setAttribute('aria-hidden', 'false');
-    mobileMenu.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-    document.body.classList.add('menu-open');
-    setTimeout(() => { if (mobilePanel) mobilePanel.focus(); }, 50);
+    navbarToggle.classList.add("active");
+    navbarToggle.setAttribute("aria-expanded", "true");
+    mobileMenu.setAttribute("aria-hidden", "false");
+    mobileMenu.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+    document.body.classList.add("menu-open");
+    setTimeout(() => {
+      if (mobilePanel) mobilePanel.focus();
+    }, 50);
   }
 
   function closeAppleMenu() {
     if (!mobileMenu) return;
-    navbarToggle.classList.remove('active');
-    navbarToggle.setAttribute('aria-expanded', 'false');
-    mobileMenu.classList.remove('is-open');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    document.body.classList.remove('menu-open');
+    navbarToggle.classList.remove("active");
+    navbarToggle.setAttribute("aria-expanded", "false");
+    mobileMenu.classList.remove("is-open");
+    mobileMenu.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    document.body.classList.remove("menu-open");
     navbarToggle.focus();
   }
 
@@ -60,7 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Use Apple-style menu on small screens
       if (window.innerWidth <= 768 && mobileMenu) {
-        if (mobileMenu.classList.contains('is-open')) closeAppleMenu(); else openAppleMenu();
+        if (mobileMenu.classList.contains("is-open")) closeAppleMenu();
+        else openAppleMenu();
         return;
       }
 
@@ -71,38 +76,45 @@ document.addEventListener("DOMContentLoaded", function () {
         navbarToggle.classList.toggle("active");
         if (navbarCenter) navbarCenter.classList.toggle("active");
         if (navbarActions) navbarActions.classList.toggle("active");
-        document.body.style.overflow = isActive ? '' : 'hidden';
+        document.body.style.overflow = isActive ? "" : "hidden";
       }
     });
   }
 
-  if (mobileOverlay) mobileOverlay.addEventListener('click', closeAppleMenu);
-  if (mobileClose) mobileClose.addEventListener('click', closeAppleMenu);
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('is-open')) closeAppleMenu();
+  if (mobileOverlay) mobileOverlay.addEventListener("click", closeAppleMenu);
+  if (mobileClose) mobileClose.addEventListener("click", closeAppleMenu);
+  document.addEventListener("keydown", (e) => {
+    if (
+      e.key === "Escape" &&
+      mobileMenu &&
+      mobileMenu.classList.contains("is-open")
+    )
+      closeAppleMenu();
   });
 
   // Close mobile menu when clicking on navbar-center overlay
   if (navbarCenter) {
     navbarCenter.addEventListener("click", function (e) {
       if (e.target === navbarCenter) {
-        console.log('Overlay clicked, closing menu');
+        console.log("Overlay clicked, closing menu");
         navbarMenu.classList.remove("active");
         navbarToggle.classList.remove("active");
         navbarCenter.classList.remove("active");
         if (navbarActions) {
           navbarActions.classList.remove("active");
         }
-        document.body.style.overflow = '';
+        document.body.style.overflow = "";
       }
     });
   }
 
   // Close mobile menu when clicking on a link
-  const navLinks = document.querySelectorAll(".navbar-menu a, .mobile-menu-links a");
+  const navLinks = document.querySelectorAll(
+    ".navbar-menu a, .mobile-menu-links a"
+  );
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
-      console.log('Nav link clicked');
+      console.log("Nav link clicked");
       navbarMenu.classList.remove("active");
       navbarToggle.classList.remove("active");
       if (navbarCenter) {
@@ -111,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (navbarActions) {
         navbarActions.classList.remove("active");
       }
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     });
   });
 

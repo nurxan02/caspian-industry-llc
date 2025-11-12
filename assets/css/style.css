@@ -2068,8 +2068,13 @@ textarea.form-control {
   }
 
   /* Slightly compact side elements to gain room */
-  .navbar-logo { padding: 8px 10px; border-radius: 24px; }
-  .navbar-logo img { height: 32px; }
+  .navbar-logo {
+    padding: 8px 10px;
+    border-radius: 24px;
+  }
+  .navbar-logo img {
+    height: 32px;
+  }
 
   .language-switcher a {
     padding: 6px 10px;
@@ -2078,8 +2083,16 @@ textarea.form-control {
   }
 
   /* Tighten the middle pill so it never overflows */
-  .navbar-menu { gap: 8px; padding: 6px; width: 100%; justify-content: space-evenly; }
-  .navbar-menu li a { padding: 8px 12px; font-size: 0.95rem; }
+  .navbar-menu {
+    gap: 8px;
+    padding: 6px;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .navbar-menu li a {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 940px) {
