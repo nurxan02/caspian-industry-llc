@@ -70,7 +70,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; <?php echo date('Y'); ?> <?php echo SITE_NAME; ?>. <?php echo t('footer_rights'); ?>  Developed by <a href="https://nurkhanmasimzada.site" style="text-decoration: none; font-weight: bold;">Masimzada</a></p>
+                <p>&copy; <?php echo date('Y'); ?> <b><?php echo SITE_NAME; ?>.</b> <?php echo t('footer_rights'); ?>  Developed by <a href="https://nurkhanmasimzada.site" style="text-decoration: none; font-weight: bold;">Masimzada</a></p>
             </div>
         </div>
     </footer>

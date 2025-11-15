@@ -114,6 +114,20 @@ class Database {
         ");
 
         $this->db->exec("
+            CREATE TABLE IF NOT EXISTS clients (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL,
+                logo TEXT,
+                website TEXT,
+                description_en TEXT,
+                description_ru TEXT,
+                description_az TEXT,
+                created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                sort_order INTEGER DEFAULT 0
+            )
+        ");
+
+        $this->db->exec("
             CREATE TABLE IF NOT EXISTS faq (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 question_en TEXT NOT NULL,

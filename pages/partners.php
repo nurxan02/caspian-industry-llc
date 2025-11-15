@@ -51,12 +51,12 @@
 </style>
 
 <!-- Hero Section -->
-<section class="page-hero" style="padding-top: 120px; padding-bottom: var(--spacing-lg); background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--bg-darker) 100%);">
+<section class="page-hero" style="padding-top: 120px; padding-bottom: var(--spacing-lg); background: linear-gradient(rgba(13, 17, 23, 0.7), rgba(13, 17, 23, 0.85)), url('<?php echo BASE_URL; ?>/assets/images/partner-back.jpg'); background-size: cover; background-position: center;">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag"><?php echo t('nav_partners'); ?></span>
+            <span class="section-tag"><?php echo t('nav_partners_tag','PARTNERS'); ?></span>
             <h1 class="section-title"><?php echo t('partners_title'); ?></h1>
-            <p class="section-description">We are proud to work with industry-leading partners</p>
+            <p class="section-description"><?php echo t('partners_description','We are proud to work with industry-leading partners'); ?></p>
         </div>
     </div>
 </section>
@@ -79,7 +79,7 @@
                         <div class="partner-name"><?php echo htmlspecialchars($partner['name']); ?></div>
                         <?php if ($partner['website']): ?>
                             <a href="<?php echo htmlspecialchars($partner['website']); ?>" target="_blank" rel="noopener" class="partner-website">
-                                <i class="fas fa-external-link-alt"></i> Visit Website
+                                <i class="fas fa-external-link-alt"></i> <?php echo t('visit_website','Visit Website'); ?>
                             </a>
                         <?php endif; ?>
                     </div>

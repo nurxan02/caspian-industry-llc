@@ -34,7 +34,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
         <!-- Sidebar -->
         <aside class="admin-sidebar">
             <div class="admin-logo">
-                <img src="<?php echo BASE_URL; ?>/assets/images/logo.svg" alt="<?php echo SITE_NAME; ?>" style="height: 40px;">
+                <img src="<?php echo BASE_URL; ?>/assets/images/logo.svg" alt="<?php echo SITE_NAME; ?>" style="height: 40px;  filter: brightness(0) invert(1);">
                 <span>Admin Panel</span>
             </div>
             
@@ -56,6 +56,9 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
                 </a>
                 <a href="<?php echo BASE_URL; ?>/admin/partners.php" class="admin-nav-item <?php echo $current_page == 'partners' ? 'active' : ''; ?>">
                     <i class="fas fa-handshake"></i> Partners
+                </a>
+                <a href="<?php echo BASE_URL; ?>/admin/clients.php" class="admin-nav-item <?php echo $current_page == 'clients' || $current_page == 'clients-edit' ? 'active' : ''; ?>">
+                    <i class="fas fa-users"></i> Clients
                 </a>
                 <a href="<?php echo BASE_URL; ?>/admin/faq.php" class="admin-nav-item <?php echo $current_page == 'faq' ? 'active' : ''; ?>">
                     <i class="fas fa-question-circle"></i> FAQ

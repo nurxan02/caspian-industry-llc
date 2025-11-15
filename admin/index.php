@@ -9,6 +9,7 @@ $stats = [
     'news' => $db->query("SELECT COUNT(*) FROM news")->fetchColumn(),
     'projects' => $db->query("SELECT COUNT(*) FROM projects")->fetchColumn(),
     'partners' => $db->query("SELECT COUNT(*) FROM partners")->fetchColumn(),
+    'clients' => $db->query("SELECT COUNT(*) FROM clients")->fetchColumn(),
 ];
 
 $unread_contacts = $db->query("SELECT COUNT(*) FROM contacts WHERE is_read = 0")->fetchColumn();
@@ -38,6 +39,11 @@ $unread_contacts = $db->query("SELECT COUNT(*) FROM contacts WHERE is_read = 0")
     <div class="stat-card" >
         <div class="stat-value"><?php echo $stats['partners']; ?></div>
         <div class="stat-label"><i class="fas fa-handshake"></i> Partners</div>
+    </div>
+    
+    <div class="stat-card" >
+        <div class="stat-value"><?php echo $stats['clients']; ?></div>
+        <div class="stat-label"><i class="fas fa-users"></i> Clients</div>
     </div>
 </div>
 

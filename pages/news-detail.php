@@ -49,7 +49,7 @@ $date = date('F j, Y', strtotime($news['published_date']));
 
 <section class="article-hero">
     <div class="container">
-        <a href="<?php echo BASE_URL; ?>/pages/news.php" class="btn btn-outline" style="margin-bottom: var(--spacing-md);">
+        <a href="<?php echo BASE_URL; ?>/pages/news.php" class="btn btn-outline" style="margin-bottom: var(--spacing-md); margin-top:10px;">
             <i class="fas fa-arrow-left"></i> <?php echo t('nav_news'); ?>
         </a>
         <div class="article-content">

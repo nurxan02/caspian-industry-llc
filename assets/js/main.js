@@ -12,6 +12,31 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Mobile language dropdown toggle
+  const mobileLangToggle = document.getElementById("mobile-lang-toggle");
+  const mobileLangMenu = document.getElementById("mobile-lang-menu");
+
+  if (mobileLangToggle && mobileLangMenu) {
+    mobileLangToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      const isExpanded =
+        mobileLangToggle.getAttribute("aria-expanded") === "true";
+      mobileLangToggle.setAttribute("aria-expanded", !isExpanded);
+      mobileLangMenu.classList.toggle("active");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (e) {
+      if (
+        !mobileLangToggle.contains(e.target) &&
+        !mobileLangMenu.contains(e.target)
+      ) {
+        mobileLangToggle.setAttribute("aria-expanded", "false");
+        mobileLangMenu.classList.remove("active");
+      }
+    });
+  }
+
   // Mobile menu toggle (legacy + Apple-style)
   const navbarToggle = document.getElementById("navbar-toggle");
   const navbarMenu = document.getElementById("navbar-menu");

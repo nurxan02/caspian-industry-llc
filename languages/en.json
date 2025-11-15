@@ -1,20 +1,28 @@
 {
   "nav_home": "Home",
   "nav_about": "About",
+  "nav_about_tag": "ABOUT",
   "nav_news": "News",
+  "nav_news_tag": "NEWS",
   "nav_projects": "Projects",
+  "nav_projects_tag": "PROJECTS",
   "nav_gallery": "Gallery",
+  "nav_gallery_tag": "GALLERY",
   "nav_partners": "Partners",
+  "nav_partners_tag": "PARTNERS",
   "nav_contact": "Contact",
   "nav_faq": "FAQ",
-  
+  "nav_faq_tag": "FAQ",
+  "nav_clients": "Our Clients",
+  "nav_clients_tag": "OUR CLIENTS",
+
   "hero_title": "Collaboration across borders",
   "hero_subtitle": "Leading industrial supplier in the Caspian region",
   "hero_cta": "Explore Our Services",
-  
+
   "about_title": "About Caspian Industry",
   "about_description": "We are a leading industrial supplier providing comprehensive solutions across the Caspian region.",
-  
+
   "contact_title": "Get In Touch",
   "contact_name": "Your Name",
   "contact_email": "Email Address",
@@ -24,37 +32,125 @@
   "contact_send": "Send Message",
   "contact_info": "Contact Information",
   "contact_address": "Address",
-  
+
   "news_title": "Latest News",
   "news_read_more": "Read More",
   "news_no_items": "No news available",
-  
+
   "projects_title": "Our Projects",
   "projects_view": "View Project",
   "projects_no_items": "No projects available",
   "projects_client": "Client",
   "projects_location": "Location",
   "projects_completed": "Completed",
-  
+
   "gallery_title": "Gallery",
   "gallery_no_items": "No images available",
-  
+  "gallery_description": "Browse through our collection of images",
+
   "partners_title": "Our Partners",
   "partners_no_items": "No partners available",
-  
+  "partners_description": "We are proud to work with industry-leading partners",
+  "visit_website": "Visit Website",
+
   "faq_title": "Frequently Asked Questions",
   "faq_no_items": "No questions available",
-  
+  "faq_description": "Find answers to commonly asked questions",
+
   "footer_about": "Caspian Industry is a leading supplier in the industrial sector, providing quality products and services.",
   "footer_quick_links": "Quick Links",
   "footer_contact": "Contact Us",
   "footer_follow": "Follow Us",
   "footer_rights": "All rights reserved.",
-  
+
   "form_success": "Your message has been sent successfully!",
   "form_error": "An error occurred. Please try again.",
-  
+
   "search": "Search",
   "loading": "Loading...",
-  "no_results": "No results found"
+  "no_results": "No results found",
+
+  "home_hero_title": "Building the future of <span class=\"gradient-text\">industrial excellence</span>",
+  "home_hero_subtitle": "Leading provider of comprehensive industrial solutions, combining cutting-edge technology with decades of expertise to deliver exceptional results worldwide.",
+  "home_cta_projects": "Our Projects",
+  "home_cta_contact": "Contact Sales",
+
+  "home_why_tag": "Why Choose Us",
+  "home_why_title": "Built for <span class=\"gradient-text\">industrial leaders</span>",
+  "home_why_desc": "Comprehensive solutions backed by decades of experience and cutting-edge technology",
+  "feature_quality_title": "Quality & Safety First",
+  "feature_quality_desc": "ISO certified processes ensuring the highest standards in every project we deliver",
+  "feature_tech_title": "Advanced Technology",
+  "feature_tech_desc": "Cutting-edge solutions leveraging the latest innovations in industrial automation",
+  "feature_global_title": "Global Network",
+  "feature_global_desc": "Worldwide presence with local expertise serving clients across multiple continents",
+  "feature_fast_title": "Fast Deployment",
+  "feature_fast_desc": "Rapid implementation with minimal downtime ensuring quick ROI for your business",
+  "feature_support_title": "24/7 Support",
+  "feature_support_desc": "Round-the-clock technical support keeping your operations running smoothly",
+  "feature_results_title": "Proven Results",
+  "feature_results_desc": "Track record of successful projects delivering measurable business outcomes",
+
+  "home_news_tag": "Latest Updates",
+  "home_news_title": "Stay informed with our <span class=\"gradient-text\">latest news</span>",
+  "home_news_desc": "Industry insights, company updates, and project announcements",
+  "read_article": "Read Article",
+  "view_all_news": "View All News",
+
+  "home_portfolio_tag": "Portfolio",
+  "home_projects_title": "Explore our <span class=\"gradient-text\">successful projects</span>",
+  "home_projects_desc": "Delivering excellence across diverse industrial sectors worldwide",
+  "view_all_projects": "View All Projects",
+
+  "home_partners_tag": "Trusted Partners",
+  "home_partners_title": "Trusted by <span class=\"gradient-text\">industry leaders</span>",
+  "home_partners_desc": "Collaborating with world-class companies to deliver exceptional results",
+  "view_all_partners": "View All Partners",
+
+  "home_cta_title": "Ready to start your <span class=\"gradient-text\">next project?</span>",
+  "home_cta_desc": "Let's discuss how we can help you achieve your industrial goals with our comprehensive solutions.",
+  "get_in_touch": "Get in Touch",
+  "view_portfolio": "View Portfolio",
+  "clients_title": "Our Clients",
+  "clients_description": "We are proud to serve leading business clients",
+  "clients_no_items": "No clients have been added yet.",
+
+  "about_hero_desc": "We are a leading industrial supplier providing comprehensive solutions across the Caspian region",
+  "about_heading": "Leading the Industry with Excellence",
+  "about_p1": "With years of experience in the industry, we prioritize innovation, quality, and customer satisfaction in everything we do. Our team of experts works tirelessly to deliver exceptional products and services that meet the evolving needs of our clients.",
+  "about_p2": "Our commitment to excellence drives us to continuously improve our processes and expand our capabilities. We believe in building long-term partnerships based on trust, reliability, and mutual success.",
+  "values_tag": "Our Values",
+  "values_title": "What Drives Us",
+  "values_desc": "The core principles that guide our business",
+  "value_quality": "Quality",
+  "value_quality_desc": "We never compromise on quality and deliver only the best products and services to our clients.",
+  "value_integrity": "Integrity",
+  "value_integrity_desc": "We conduct business with honesty, transparency, and ethical practices in all our dealings.",
+  "value_innovation": "Innovation",
+  "value_innovation_desc": "We embrace innovation and continuously seek better ways to serve our customers.",
+  "value_teamwork": "Teamwork",
+  "value_teamwork_desc": "We believe in the power of collaboration and work together to achieve common goals.",
+  "value_sustainability": "Sustainability",
+  "value_sustainability_desc": "We are committed to sustainable practices that benefit our environment and communities.",
+  "value_excellence": "Excellence",
+  "value_excellence_desc": "We strive for excellence in everything we do, from products to customer service."
+  
+  "home_about_line1": "We, Azerbaijan",
+  "home_about_line2": "ensure the sustainable",
+  "home_about_line3": "development of the economy",
+  "home_about_line4": "through innovative solutions",
+  "home_about_line5": "and high-quality",
+  "home_about_line6": "services",
+  "home_about_mline1": "We, Azerbaijan's economy",
+  "home_about_mline2": "aim for sustainable development",
+  "home_about_mline3": "with innovative solutions and",
+  "home_about_mline4": "high‑quality services",
+  "home_about_mline5": "we deliver.",
+  "home_about_paragraph": "The world‑renowned manufacturers we partner with confirm the high quality and efficiency of Caspian Industry's supply chain. Our clients include many reputable companies operating regionally and internationally.",
+  "home_about_button": "Learn More",
+  "home_stats_title": "Satisfied customers",
+  "home_stats_desc": "Customer satisfaction is our priority. With high‑quality services and products, we have earned the trust of our clients. Their feedback is valuable to us.",
+  "home_stats_item1": "Products meeting international standards",
+  "home_stats_item2": "Reliable business partner",
+  "home_stats_item3": "Professional team"
 }

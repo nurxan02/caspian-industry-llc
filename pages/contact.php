@@ -5,26 +5,26 @@
     <div class="contact-container">
         <!-- Left Side - Form -->
         <div class="contact-form-wrapper">
-            <h1 class="contact-title">We're here to help</h1>
+            <h1 class="contact-title"><?php echo t('contact_title','We\'re here to help'); ?></h1>
             
             <form id="contactForm" action="<?php echo BASE_URL; ?>/includes/contact-handler.php" method="POST" class="modern-contact-form">
                 <div class="form-group">
-                    <label class="form-label">Name</label>
+                    <label class="form-label"><?php echo t('contact_name','Name'); ?></label>
                     <input type="text" name="name" class="form-control" placeholder="e.g. John Smith" required>
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label">Email address</label>
+                    <label class="form-label"><?php echo t('contact_email','Email address'); ?></label>
                     <input type="email" name="email" class="form-control" placeholder="e.g. example@gmail.com" required>
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label">Message</label>
+                    <label class="form-label"><?php echo t('contact_message','Message'); ?></label>
                     <textarea name="message" class="form-control" rows="6" placeholder="Let us know how we can help" required></textarea>
                 </div>
                 
                 <button type="submit" class="btn-send-message">
-                    Send message
+                    <?php echo t('contact_send','Send message'); ?>
                 </button>
             </form>
         </div>
@@ -72,7 +72,7 @@
     </div>
     
     <!-- Contact Information Cards -->
-    <div class="contact-info-wrapper">
+    <div class="contact-info-wrapper" >
         <div class="container">
             <?php
             $db = Database::getInstance()->getConnection();
@@ -85,14 +85,14 @@
             $address = isset($settingsData['address']) ? $settingsData['address'] : '';
             ?>
             
-            <div class="contact-info-grid">
+            <div class="contact-info-grid" style="margin-top:1rem;">
                 <?php if (!empty($email)): ?>
                 <div class="contact-info-item">
                     <div class="contact-info-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div class="contact-info-content">
-                        <h4>Email</h4>
+                        <h4><?php echo t('contact_email','Email'); ?></h4>
                         <a href="mailto:<?php echo htmlspecialchars($email); ?>">
                             <?php echo htmlspecialchars($email); ?>
                         </a>
@@ -106,7 +106,7 @@
                         <i class="fas fa-phone"></i>
                     </div>
                     <div class="contact-info-content">
-                        <h4>Phone</h4>
+                        <h4><?php echo t('contact_phone','Phone'); ?></h4>
                         <a href="tel:<?php echo htmlspecialchars($phone); ?>">
                             <?php echo htmlspecialchars($phone); ?>
                         </a>
@@ -120,7 +120,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <div class="contact-info-content">
-                        <h4>Address</h4>
+                        <h4><?php echo t('contact_address','Address'); ?></h4>
                         <p><?php echo nl2br(htmlspecialchars($address)); ?></p>
                     </div>
                 </div>

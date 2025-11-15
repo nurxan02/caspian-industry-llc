@@ -37,6 +37,21 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="navbar-container">
+            <!-- Mobile language dropdown (left side on mobile) -->
+            <div class="mobile-language-dropdown">
+                <button class="mobile-lang-toggle" id="mobile-lang-toggle" aria-label="Select language" aria-expanded="false">
+                    <span class="current-lang"><?php echo strtoupper(Language::getCurrentLang()); ?></span>
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div class="mobile-lang-menu" id="mobile-lang-menu">
+                    <a href="?lang=en" class="<?php echo Language::getCurrentLang() == 'en' ? 'active' : ''; ?>">EN</a>
+                    <a href="?lang=ru" class="<?php echo Language::getCurrentLang() == 'ru' ? 'active' : ''; ?>">RU</a>
+                    <a href="?lang=az" class="<?php echo Language::getCurrentLang() == 'az' ? 'active' : ''; ?>">AZ</a>
+                </div>
+            </div>
+            
             <a href="<?php echo BASE_URL; ?>/index.php" class="navbar-logo">
                 <picture>
                     <source media="(max-width: 768px)" srcset="<?php echo BASE_URL; ?>/assets/images/logo.svg">
@@ -52,21 +67,22 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
             
             <div class="navbar-center">
                 <ul class="navbar-menu" id="navbar-menu">
-                    <li><a href="<?php echo BASE_URL; ?>/index.php" class="<?php echo $current_page == 'index' ? 'active' : ''; ?>">Home</a></li>
-                    <li><a href="<?php echo BASE_URL; ?>/pages/news.php" class="<?php echo $current_page == 'news' ? 'active' : ''; ?>">News</a></li>
-                    <li><a href="<?php echo BASE_URL; ?>/pages/projects.php" class="<?php echo $current_page == 'projects' ? 'active' : ''; ?>">Projects</a></li>
+                    <li><a href="<?php echo BASE_URL; ?>/index.php" class="<?php echo $current_page == 'index' ? 'active' : ''; ?>"><?php echo t('nav_home','Home'); ?></a></li>
+                    <li><a href="<?php echo BASE_URL; ?>/pages/news.php" class="<?php echo $current_page == 'news' ? 'active' : ''; ?>"><?php echo t('nav_news','News'); ?></a></li>
+                    <li><a href="<?php echo BASE_URL; ?>/pages/projects.php" class="<?php echo $current_page == 'projects' ? 'active' : ''; ?>"><?php echo t('nav_projects','Projects'); ?></a></li>
                     <li class="navbar-dropdown">
-                        <a href="<?php echo BASE_URL; ?>/pages/about.php" class="<?php echo ($current_page == 'about' || $current_page == 'partners' || $current_page == 'faq') ? 'active' : ''; ?>">
-                            About
+                        <a href="<?php echo BASE_URL; ?>/pages/about.php" class="<?php echo ($current_page == 'about' || $current_page == 'partners' || $current_page == 'clients' || $current_page == 'faq') ? 'active' : ''; ?>">
+                            <?php echo t('nav_about','About'); ?>
                         </a>
                         <ul class="navbar-dropdown-menu">
-                            <li><a href="<?php echo BASE_URL; ?>/pages/about.php">Company Info</a></li>
-                            <li><a href="<?php echo BASE_URL; ?>/pages/partners.php">Partners</a></li>
-                            <li><a href="<?php echo BASE_URL; ?>/pages/gallery.php">Gallery</a></li>
-                            <li><a href="<?php echo BASE_URL; ?>/pages/faq.php">FAQ</a></li>
+                            <li><a href="<?php echo BASE_URL; ?>/pages/about.php"><?php echo t('nav_about','About'); ?></a></li>
+                            <li><a href="<?php echo BASE_URL; ?>/pages/partners.php"><?php echo t('nav_partners','Partners'); ?></a></li>
+                            <li><a href="<?php echo BASE_URL; ?>/pages/clients.php"><?php echo t('nav_clients','Our Clients'); ?></a></li>
+                            <li><a href="<?php echo BASE_URL; ?>/pages/gallery.php"><?php echo t('nav_gallery','Gallery'); ?></a></li>
+                            <li><a href="<?php echo BASE_URL; ?>/pages/faq.php"><?php echo t('nav_faq','FAQ'); ?></a></li>
                         </ul>
                     </li>
-                    <li><a href="<?php echo BASE_URL; ?>/pages/contact.php" class="<?php echo $current_page == 'contact' ? 'active' : ''; ?>">Contact</a></li>
+                    <li><a href="<?php echo BASE_URL; ?>/pages/contact.php" class="<?php echo $current_page == 'contact' ? 'active' : ''; ?>"><?php echo t('nav_contact','Contact'); ?></a></li>
                 </ul>
             </div>
             
@@ -85,14 +101,15 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
         <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
         <div class="mobile-menu-panel" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
             <ul class="mobile-menu-links">
-                <li><a href="<?php echo BASE_URL; ?>/index.php">Home</a></li>
-                <li><a href="<?php echo BASE_URL; ?>/pages/news.php">News</a></li>
-                <li><a href="<?php echo BASE_URL; ?>/pages/projects.php">Projects</a></li>
-                <li><a href="<?php echo BASE_URL; ?>/pages/about.php">About</a></li>
-                <li><a href="<?php echo BASE_URL; ?>/pages/partners.php">Partners</a></li>
-                <li><a href="<?php echo BASE_URL; ?>/pages/gallery.php">Gallery</a></li>
-                <li><a href="<?php echo BASE_URL; ?>/pages/faq.php">FAQ</a></li>
-                <li><a href="<?php echo BASE_URL; ?>/pages/contact.php">Contact</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/index.php"><?php echo t('nav_home','Home'); ?></a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/news.php"><?php echo t('nav_news','News'); ?></a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/projects.php"><?php echo t('nav_projects','Projects'); ?></a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/about.php"><?php echo t('nav_about','About'); ?></a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/clients.php"><?php echo t('nav_clients','Our Clients'); ?></a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/partners.php"><?php echo t('nav_partners','Partners'); ?></a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/gallery.php"><?php echo t('nav_gallery','Gallery'); ?></a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/faq.php"><?php echo t('nav_faq','FAQ'); ?></a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/contact.php"><?php echo t('nav_contact','Contact'); ?></a></li>
             </ul>
         </div>
     </div>

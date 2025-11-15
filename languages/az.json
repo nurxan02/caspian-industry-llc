@@ -1,20 +1,28 @@
 {
   "nav_home": "Ana Səhifə",
   "nav_about": "Haqqımızda",
+  "nav_about_tag": "HAQQIMIZDA",
   "nav_news": "Xəbərlər",
+  "nav_news_tag": "XƏBƏRLƏR",
   "nav_projects": "Layihələr",
+  "nav_projects_tag": "LAYİHƏLƏR",
   "nav_gallery": "Qalereya",
+  "nav_gallery_tag": "QALEREYA",
   "nav_partners": "Tərəfdaşlar",
+  "nav_partners_tag": "TƏRƏFDAŞLAR",
   "nav_contact": "Əlaqə",
   "nav_faq": "FAQ",
-  
+  "nav_faq_tag": "FAQ",
+  "nav_clients": "Müştərilərimiz",
+  "nav_clients_tag": "MÜŞTƏRİLƏRİMİZ",
+
   "hero_title": "Sərhədsiz əməkdaşlıq",
   "hero_subtitle": "Xəzər regionunda aparıcı sənaye təchizatçısı",
   "hero_cta": "Xidmətlərimiz",
-  
+
   "about_title": "Caspian Industry haqqında",
   "about_description": "Biz Xəzər regionunda kompleks həllər təqdim edən aparıcı sənaye təchizatçısıyıq.",
-  
+
   "contact_title": "Bizimlə əlaqə saxlayın",
   "contact_name": "Adınız",
   "contact_email": "Email",
@@ -24,37 +32,124 @@
   "contact_send": "Göndər",
   "contact_info": "Əlaqə məlumatları",
   "contact_address": "Ünvan",
-  
+
   "news_title": "Son xəbərlər",
   "news_read_more": "Daha çox",
   "news_no_items": "Xəbər yoxdur",
-  
+
   "projects_title": "Layihələrimiz",
   "projects_view": "Layihəyə bax",
   "projects_no_items": "Layihə yoxdur",
   "projects_client": "Müştəri",
   "projects_location": "Yer",
   "projects_completed": "Tamamlandı",
-  
+
   "gallery_title": "Qalereya",
   "gallery_no_items": "Şəkil yoxdur",
-  
+  "gallery_description": "Şəkillər kolleksiyamıza nəzər salın",
+
   "partners_title": "Tərəfdaşlarımız",
   "partners_no_items": "Tərəfdaş yoxdur",
-  
+  "partners_description": "Sənayenin aparıcı tərəfdaşları ilə əməkdaşlıq edirik",
+  "visit_website": "Sayta keçid",
+
   "faq_title": "Tez-tez verilən suallar",
   "faq_no_items": "Sual yoxdur",
-  
+  "faq_description": "Ən çox verilən sualların cavablarını tapın",
+
   "footer_about": "Caspian Industry sənaye sektorunda aparıcı təchizatçıdır və keyfiyyətli məhsul və xidmətlər təqdim edir.",
   "footer_quick_links": "Sürətli keçidlər",
   "footer_contact": "Bizimlə əlaqə",
   "footer_follow": "Bizi izləyin",
   "footer_rights": "Bütün hüquqlar qorunur.",
-  
+
   "form_success": "Mesajınız uğurla göndərildi!",
   "form_error": "Xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.",
-  
+
   "search": "Axtar",
   "loading": "Yüklənir...",
-  "no_results": "Nəticə tapılmadı"
+  "no_results": "Nəticə tapılmadı",
+
+  "home_hero_title": "Gələcəyin <span class=\"gradient-text\">sənaye mükəmməlliyini</span> qururuq",
+  "home_hero_subtitle": "Müasir texnologiyalar və on illik təcrübəni birləşdirərək dünya üzrə istisna nəticələr təqdim edən kompleks sənaye həlləri təchizatçısıyıq.",
+  "home_cta_projects": "Layihələrimiz",
+  "home_cta_contact": "Satışla əlaqə",
+
+  "home_why_tag": "Niyə biz?",
+  "home_why_title": "<span class=\"gradient-text\">Sənaye liderləri</span> üçün",
+  "home_why_desc": "Onillik təcrübə və müasir texnologiyalara əsaslanan hərtərəfli həllər",
+  "feature_quality_title": "Keyfiyyət və təhlükəsizlik",
+  "feature_quality_desc": "Hər layihədə ən yüksək standartlara zəmanət verən ISO sertifikatlı proseslər",
+  "feature_tech_title": "Müasir texnologiyalar",
+  "feature_tech_desc": "Sənaye avtomatlaşdırmasında ən son yeniliklərdən istifadə edən həllər",
+  "feature_global_title": "Qlobal şəbəkə",
+  "feature_global_desc": "Bir neçə qitədə yerli ekspertiza ilə qlobal fəaliyyət",
+  "feature_fast_title": "Sürətli icra",
+  "feature_fast_desc": "Minimum dayanma ilə sürətli tətbiq və sürətli ROI",
+  "feature_support_title": "24/7 dəstək",
+  "feature_support_desc": "Fasiləsiz texniki dəstək ilə sabit fəaliyyət",
+  "feature_results_title": "Sübut olunmuş nəticələr",
+  "feature_results_desc": "Ölçülə bilən nəticələr verən uğurlu layihələr tarixi",
+
+  "home_news_tag": "Son yeniliklər",
+  "home_news_title": "<span class=\"gradient-text\">Son xəbərlərimizdən</span> xəbərdar olun",
+  "home_news_desc": "Sənaye baxışları, şirkət yenilikləri və layihə elanları",
+  "read_article": "Məqaləni oxu",
+  "view_all_news": "Bütün xəbərlər",
+
+  "home_portfolio_tag": "Portfel",
+  "home_projects_title": "<span class=\"gradient-text\">Uğurlu layihələrimizi</span> kəşf edin",
+  "home_projects_desc": "Dünyanın müxtəlif sənaye sahələrində mükəmməllik",
+  "view_all_projects": "Bütün layihələr",
+
+  "home_partners_tag": "Etibarlı tərəfdaşlar",
+  "home_partners_title": "<span class=\"gradient-text\">Sənaye liderləri</span> tərəfindən seçilir",
+  "home_partners_desc": "Dünya səviyyəli şirkətlərlə əməkdaşlıq edirik",
+  "view_all_partners": "Bütün tərəfdaşlar",
+
+  "home_cta_title": "<span class=\"gradient-text\">Növbəti layihənizə</span> başlamağa hazırsınız?",
+  "home_cta_desc": "Sənaye məqsədlərinizə hərtərəfli həllərimizlə necə çatdırmağımızı müzakirə edək.",
+  "get_in_touch": "Əlaqə saxlayın",
+  "view_portfolio": "Portfeli gör",
+  "clients_title": "Müştərilərimiz",
+  "clients_description": "Sənayenin aparıcı biznes müştərilərinə xidmət göstəririk",
+  "clients_no_items": "Hələ müştəri əlavə edilməyib.",
+
+  "about_hero_desc": "Xəzər regionu üzrə hərtərəfli həllər təqdim edən aparıcı sənaye təchizatçısıyıq",
+  "about_heading": "Sənayedə mükəmməlliyə doğru",
+  "about_p1": "Sənayedə çoxillik təcrübəmizlə innovasiya, keyfiyyət və müştəri məmnuniyyətini prioritet götürürük.",
+  "about_p2": "Mükəmməllik öhdəliyimiz proseslərimizi daim təkmilləşdirməyə və imkanlarımızı genişləndirməyə sövq edir.",
+  "values_tag": "Dəyərlərimiz",
+  "values_title": "Bizi irəli aparanlar",
+  "values_desc": "Fəaliyyətimizi istiqamətləndirən əsas prinsiplər",
+  "value_quality": "Keyfiyyət",
+  "value_quality_desc": "Keyfiyyətdən heç vaxt güzəştə getmirik və yalnız ən yaxşısını təqdim edirik.",
+  "value_integrity": "Dürüstlük",
+  "value_integrity_desc": "Bütün fəaliyyətimizdə dürüstlük, şəffaflıq və etik qaydalara əməl edirik.",
+  "value_innovation": "İnnovasiya",
+  "value_innovation_desc": "Müştərilərə daha yaxşı xidmət üçün daim yenilik axtarırıq.",
+  "value_teamwork": "Komanda işi",
+  "value_teamwork_desc": "Əməkdaşlığın gücünə inanırıq və birlikdə məqsədlərə çatırıq.",
+  "value_sustainability": "Davamlılıq",
+  "value_sustainability_desc": "Mühit və icmalar üçün faydalı davamlı təcrübələrə sadiqik.",
+  "value_excellence": "Mükəmməllik",
+  "value_excellence_desc": "Məhsullardan müştəri xidmətinə qədər hər işdə mükəmməllik üçün çalışırıq.",
+  "home_about_line1": "Biz, Azərbaycan",
+  "home_about_line2": "iqtisadiyyatının dayanıqlı",
+  "home_about_line3": "inkişafını təmin etmək",
+  "home_about_line4": "məqsədilə innovativ həllər",
+  "home_about_line5": "və yüksək keyfiyyətli",
+  "home_about_line6": "xidmətlər təqdim edirik.",
+  "home_about_mline1": "Biz, Azərbaycan iqtisadiyyatının",
+  "home_about_mline2": "dayanıqlı inkişafını təmin etmək",
+  "home_about_mline3": "məqsədilə innovativ həllər və",
+  "home_about_mline4": "yüksək keyfiyyətli xidmətlər",
+  "home_about_mline5": "təqdim edirik.",
+  "home_about_paragraph": "Əməkdaşlıq etdiyimiz dünya miqyasında tanınan aparıcı istehsalçılar, Caspian Industry-nin təchizat zəncirinin yüksək keyfiyyətini və effektivliyini təsdiqləyir. Müştərilərimiz arasında regional və beynəlxalq miqyasda fəaliyyət göstərən nüfuzlu şirkətlər yer alır.",
+  "home_about_button": "Daha Çox Məlumat",
+  "home_stats_title": "Məmnun müştəri",
+  "home_stats_desc": "Müştəri məmnuniyyəti bizim üçün prioritetdir. Yüksək keyfiyyətli xidmət və məhsullarımızla müştərilərimizin etibarını qazanmışıq. Onların rəyləri bizim üçün dəyərlidir.",
+  "home_stats_item1": "Beynəlxalq standartlara uyğun məhsullar",
+  "home_stats_item2": "Etibarlı biznes tərəfdaşı",
+  "home_stats_item3": "Peşəkar heyət"
 }

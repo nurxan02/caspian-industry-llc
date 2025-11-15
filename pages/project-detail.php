@@ -71,7 +71,7 @@ $images = $project['images'] ? json_decode($project['images'], true) : [];
 
 <section class="page-hero" style="padding-top: 120px; padding-bottom: var(--spacing-lg); background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--bg-darker) 100%);">
     <div class="container">
-        <a href="<?php echo BASE_URL; ?>/pages/projects.php" class="btn btn-outline" style="margin-bottom: var(--spacing-md);">
+        <a href="<?php echo BASE_URL; ?>/pages/projects.php" class="btn btn-outline" style="margin-bottom: var(--spacing-md); margin-top:10px;">
             <i class="fas fa-arrow-left"></i> <?php echo t('nav_projects'); ?>
         </a>
         <h1><?php echo htmlspecialchars($title); ?></h1>

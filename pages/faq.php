@@ -61,9 +61,9 @@
 <section class="page-hero" style="padding-top: 120px; padding-bottom: var(--spacing-lg); background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--bg-darker) 100%);">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag"><?php echo t('nav_faq'); ?></span>
+            <span class="section-tag"><?php echo t('nav_faq_tag','FAQ'); ?></span>
             <h1 class="section-title"><?php echo t('faq_title'); ?></h1>
-            <p class="section-description">Find answers to commonly asked questions</p>
+            <p class="section-description"><?php echo t('faq_description','Find answers to commonly asked questions'); ?></p>
         </div>
     </div>
 </section>

@@ -6,10 +6,10 @@
     <div class="container">
         <div class="hero-content" style="grid-template-columns: 1fr;">
             <div class="hero-text" style="max-width: 100%; text-align: center;">
-                <span class="hero-tag"> <?php echo t('nav_about'); ?></span>
+                <span class="hero-tag"> <?php echo t('nav_about_tag','ABOUT'); ?></span>
                 <h1 class="hero-title"><?php echo t('about_title'); ?></h1>
                 <p class="hero-subtitle" style="max-width: 800px; margin: 0 auto;">
-                    We are a leading industrial supplier providing comprehensive solutions across the Caspian region
+                    <?php echo t('about_hero_desc','We are a leading industrial supplier providing comprehensive solutions across the Caspian region'); ?>
                 </p>
             </div>
         </div>
@@ -22,19 +22,16 @@
         <div class="about-content-grid">
             <div class="about-text">
                 <h2 style="font-size: 2.5rem; margin-bottom: var(--spacing-lg); color: var(--text-white); font-weight: 700;">
-                    Leading the Industry with Excellence
+                    <?php echo t('about_heading','Leading the Industry with Excellence'); ?>
                 </h2>
                 <p style="font-size: 1.125rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--spacing-lg);">
                     <?php echo t('about_description'); ?>
                 </p>
                 <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--spacing-lg);">
-                    With years of experience in the industry, we prioritize innovation, quality, and customer satisfaction 
-                    in everything we do. Our team of experts works tirelessly to deliver exceptional products and services 
-                    that meet the evolving needs of our clients.
+                    <?php echo t('about_p1','With years of experience in the industry, we prioritize innovation, quality, and customer satisfaction in everything we do. Our team of experts works tirelessly to deliver exceptional products and services that meet the evolving needs of our clients.'); ?>
                 </p>
                 <p style="color: var(--text-secondary); line-height: 1.8;">
-                    Our commitment to excellence drives us to continuously improve our processes and expand our capabilities. 
-                    We believe in building long-term partnerships based on trust, reliability, and mutual success.
+                    <?php echo t('about_p2','Our commitment to excellence drives us to continuously improve our processes and expand our capabilities. We believe in building long-term partnerships based on trust, reliability, and mutual success.'); ?>
                 </p>
             </div>
             <div class="about-globe-wrapper">
@@ -91,7 +88,7 @@
 <!-- Stats Section - Modern Cards -->
 <section class="section section-alt">
     <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-lg);">
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-lg); margin:10px;">
             <div class="stat-card-modern">
                 <div class="stat-value-modern">15+</div>
                 <div class="stat-label-modern">Years of Experience</div>
@@ -174,9 +171,9 @@
 <section class="section section-alt">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag">Our Values</span>
-            <h2 class="section-title">What Drives Us</h2>
-            <p class="section-description">The core principles that guide our business</p>
+            <span class="section-tag"><?php echo t('values_tag','Our Values'); ?></span>
+            <h2 class="section-title"><?php echo t('values_title','What Drives Us'); ?></h2>
+            <p class="section-description"><?php echo t('values_desc','The core principles that guide our business'); ?></p>
         </div>
         
         <div class="grid grid-3">
@@ -185,8 +182,8 @@
                     <div style="width: 64px; height: 64px; background: rgba(59, 130, 246, 0.1); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-lg);">
                         <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--color-primary);"></i>
                     </div>
-                    <h4 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);">Quality</h4>
-                    <p style="color: var(--text-secondary);">We never compromise on quality and deliver only the best products and services to our clients.</p>
+                    <h4 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);"><?php echo t('value_quality','Quality'); ?></h4>
+                    <p style="color: var(--text-secondary);"><?php echo t('value_quality_desc','We never compromise on quality and deliver only the best products and services to our clients.'); ?></p>
                 </div>
             </div>
             <div class="card text-center">
@@ -194,8 +191,8 @@
                     <div style="width: 64px; height: 64px; background: rgba(59, 130, 246, 0.1); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-lg);">
                         <i class="fas fa-handshake" style="font-size: 2rem; color: var(--color-primary);"></i>
                     </div>
-                    <h4 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);">Integrity</h4>
-                    <p style="color: var(--text-secondary);">We conduct business with honesty, transparency, and ethical practices in all our dealings.</p>
+                    <h4 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);"><?php echo t('value_integrity','Integrity'); ?></h4>
+                    <p style="color: var(--text-secondary);"><?php echo t('value_integrity_desc','We conduct business with honesty, transparency, and ethical practices in all our dealings.'); ?></p>
                 </div>
             </div>
             <div class="card text-center">
@@ -203,8 +200,8 @@
                     <div style="width: 64px; height: 64px; background: rgba(59, 130, 246, 0.1); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-lg);">
                         <i class="fas fa-lightbulb" style="font-size: 2rem; color: var(--color-primary);"></i>
                     </div>
-                    <h4 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);">Innovation</h4>
-                    <p style="color: var(--text-secondary);">We embrace innovation and continuously seek better ways to serve our customers.</p>
+                    <h4 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);"><?php echo t('value_innovation','Innovation'); ?></h4>
+                    <p style="color: var(--text-secondary);"><?php echo t('value_innovation_desc','We embrace innovation and continuously seek better ways to serve our customers.'); ?></p>
                 </div>
             </div>
             <div class="card text-center">
@@ -212,8 +209,8 @@
                     <div style="width: 64px; height: 64px; background: rgba(59, 130, 246, 0.1); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-lg);">
                         <i class="fas fa-users" style="font-size: 2rem; color: var(--color-primary);"></i>
                     </div>
-                    <h4 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);">Teamwork</h4>
-                    <p style="color: var(--text-secondary);">We believe in the power of collaboration and work together to achieve common goals.</p>
+                    <h4 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);"><?php echo t('value_teamwork','Teamwork'); ?></h4>
+                    <p style="color: var(--text-secondary);"><?php echo t('value_teamwork_desc','We believe in the power of collaboration and work together to achieve common goals.'); ?></p>
                 </div>
             </div>
             <div class="card text-center">
@@ -221,8 +218,8 @@
                     <div style="width: 64px; height: 64px; background: rgba(59, 130, 246, 0.1); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-lg);">
                         <i class="fas fa-leaf" style="font-size: 2rem; color: var(--color-primary);"></i>
                     </div>
-                    <h4 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);">Sustainability</h4>
-                    <p style="color: var(--text-secondary);">We are committed to sustainable practices that benefit our environment and communities.</p>
+                    <h4 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);"><?php echo t('value_sustainability','Sustainability'); ?></h4>
+                    <p style="color: var(--text-secondary);"><?php echo t('value_sustainability_desc','We are committed to sustainable practices that benefit our environment and communities.'); ?></p>
                 </div>
             </div>
             <div class="card text-center">
@@ -230,8 +227,8 @@
                     <div style="width: 64px; height: 64px; background: rgba(59, 130, 246, 0.1); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-lg);">
                         <i class="fas fa-star" style="font-size: 2rem; color: var(--color-primary);"></i>
                     </div>
-                    <h4 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);">Excellence</h4>
-                    <p style="color: var(--text-secondary);">We strive for excellence in everything we do, from products to customer service.</p>
+                    <h4 style="font-size: 1.25rem; margin-bottom: var(--spacing-md);"><?php echo t('value_excellence','Excellence'); ?></h4>
+                    <p style="color: var(--text-secondary);"><?php echo t('value_excellence_desc','We strive for excellence in everything we do, from products to customer service.'); ?></p>
                 </div>
             </div>
         </div>

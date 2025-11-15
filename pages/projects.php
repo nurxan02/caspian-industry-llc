@@ -34,12 +34,12 @@
 </style>
 
 <!-- Hero Section -->
-<section class="page-hero">
+<section class="page-hero" style="background: linear-gradient(rgba(13, 17, 23, 0.7), rgba(13, 17, 23, 0.85)), url('<?php echo BASE_URL; ?>/assets/images/project-back.jpg'); background-size: cover; background-position: center; ">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag"><?php echo t('nav_projects'); ?></span>
+            <span class="section-tag"><?php echo t('nav_projects_tag','PROJECTS'); ?></span>
             <h1 class="section-title"><?php echo t('projects_title'); ?></h1>
-            <p class="section-description">Explore our portfolio of successful projects</p>
+            <p class="section-description"><?php echo t('projects_description','Explore our portfolio of successful projects'); ?></p>
         </div>
     </div>
 </section>

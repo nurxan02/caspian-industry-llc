@@ -4,8 +4,8 @@ define('DB_PATH', __DIR__ . '/../database/caspian_industry.db');
 
 // Site configuration
 define('SITE_NAME', 'Caspian Industry');
-define('DEFAULT_LANG', 'en');
-define('AVAILABLE_LANGS', ['en', 'ru', 'az']);
+define('DEFAULT_LANG', 'az');
+define('AVAILABLE_LANGS', ['az', 'en', 'ru']);
 
 // Base URL configuration - PHP built-in server
 define('BASE_URL', '');
