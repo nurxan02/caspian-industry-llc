@@ -92,7 +92,7 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div class="contact-info-content">
-                        <h4><?php echo t('contact_email','Email'); ?></h4>
+                        <h4><?php echo t('contact_email_label','EMAIL'); ?></h4>
                         <a href="mailto:<?php echo htmlspecialchars($email); ?>">
                             <?php echo htmlspecialchars($email); ?>
                         </a>
@@ -106,7 +106,7 @@
                         <i class="fas fa-phone"></i>
                     </div>
                     <div class="contact-info-content">
-                        <h4><?php echo t('contact_phone','Phone'); ?></h4>
+                        <h4><?php echo t('contact_phone_label','PHONE'); ?></h4>
                         <a href="tel:<?php echo htmlspecialchars($phone); ?>">
                             <?php echo htmlspecialchars($phone); ?>
                         </a>
@@ -120,7 +120,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <div class="contact-info-content">
-                        <h4><?php echo t('contact_address','Address'); ?></h4>
+                        <h4><?php echo t('contact_address_label','ADDRESS'); ?></h4>
                         <p><?php echo nl2br(htmlspecialchars($address)); ?></p>
                     </div>
                 </div>

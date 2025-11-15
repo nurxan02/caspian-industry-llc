@@ -32,6 +32,9 @@
   "contact_send": "Send Message",
   "contact_info": "Contact Information",
   "contact_address": "Address",
+  "contact_email_label": "EMAIL",
+  "contact_phone_label": "PHONE",
+  "contact_address_label": "ADDRESS",
 
   "news_title": "Latest News",
   "news_description": "Stay updated with our latest news and announcements",

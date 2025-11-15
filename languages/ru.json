@@ -32,6 +32,9 @@
   "contact_send": "Отправить",
   "contact_info": "Контактная информация",
   "contact_address": "Адрес",
+  "contact_email_label": "EMAIL",
+  "contact_phone_label": "ТЕЛЕФОН",
+  "contact_address_label": "АДРЕС",
 
   "news_title": "Последние новости",
   "news_description": "Будьте в курсе наших последних новостей и объявлений",

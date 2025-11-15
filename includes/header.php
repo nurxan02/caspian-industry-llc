@@ -40,10 +40,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
             <!-- Mobile language dropdown (left side on mobile) -->
             <div class="mobile-language-dropdown">
                 <button class="mobile-lang-toggle" id="mobile-lang-toggle" aria-label="Select language" aria-expanded="false">
-                    <span class="current-lang"><?php echo strtoupper(Language::getCurrentLang()); ?></span>
-                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
+                    <i class="fas fa-globe"></i>
                 </button>
                 <div class="mobile-lang-menu" id="mobile-lang-menu">
                     <a href="?lang=en" class="<?php echo Language::getCurrentLang() == 'en' ? 'active' : ''; ?>">EN</a>
@@ -52,9 +49,10 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
                 </div>
             </div>
             
+            <!-- Logo (center on mobile) -->
             <a href="<?php echo BASE_URL; ?>/index.php" class="navbar-logo">
                 <picture>
-                    <source media="(max-width: 768px)" srcset="<?php echo BASE_URL; ?>/assets/images/logo.svg">
+                    <!-- <source media="(max-width: 768px)" srcset="<?php echo BASE_URL; ?>/assets/images/logo.svg"> -->
                     <img src="<?php echo BASE_URL; ?>/assets/images/Font+Logo.svg" alt="<?php echo SITE_NAME; ?>">
                 </picture>
             </a>

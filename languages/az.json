@@ -32,6 +32,9 @@
   "contact_send": "Göndər",
   "contact_info": "Əlaqə məlumatları",
   "contact_address": "Ünvan",
+  "contact_email_label": "EMAIL",
+  "contact_phone_label": "TELEFON",
+  "contact_address_label": "ÜNVAN",
 
   "news_title": "Son xəbərlər",
   "news_description": "Ən son xəbərlərimiz və elanlarımızla tanış olun",
