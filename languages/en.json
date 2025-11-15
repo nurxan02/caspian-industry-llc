@@ -34,10 +34,12 @@
   "contact_address": "Address",
 
   "news_title": "Latest News",
+  "news_description": "Stay updated with our latest news and announcements",
   "news_read_more": "Read More",
   "news_no_items": "No news available",
 
   "projects_title": "Our Projects",
+  "projects_description": "Explore our portfolio of successful projects",
   "projects_view": "View Project",
   "projects_no_items": "No projects available",
   "projects_client": "Client",
@@ -133,8 +135,8 @@
   "value_sustainability": "Sustainability",
   "value_sustainability_desc": "We are committed to sustainable practices that benefit our environment and communities.",
   "value_excellence": "Excellence",
-  "value_excellence_desc": "We strive for excellence in everything we do, from products to customer service."
-  
+  "value_excellence_desc": "We strive for excellence in everything we do, from products to customer service.",
+
   "home_about_line1": "We, Azerbaijan",
   "home_about_line2": "ensure the sustainable",
   "home_about_line3": "development of the economy",

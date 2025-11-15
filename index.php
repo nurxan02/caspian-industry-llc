@@ -316,7 +316,7 @@
                             </div>
                             
                             <a href="<?php echo BASE_URL; ?>/pages/project-detail.php?id=<?php echo $project['id']; ?>" class="project-link">
-                                View Details <i class="fas fa-arrow-right"></i>
+                                <?php echo t('projects_view'); ?> <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </article>

@@ -34,10 +34,12 @@
   "contact_address": "Адрес",
 
   "news_title": "Последние новости",
+  "news_description": "Будьте в курсе наших последних новостей и объявлений",
   "news_read_more": "Читать далее",
   "news_no_items": "Нет новостей",
 
   "projects_title": "Наши проекты",
+  "projects_description": "Изучите портфолио наших успешных проектов",
   "projects_view": "Посмотреть проект",
   "projects_no_items": "Нет проектов",
   "projects_client": "Клиент",

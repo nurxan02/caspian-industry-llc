@@ -34,10 +34,12 @@
   "contact_address": "Ünvan",
 
   "news_title": "Son xəbərlər",
+  "news_description": "Ən son xəbərlərimiz və elanlarımızla tanış olun",
   "news_read_more": "Daha çox",
   "news_no_items": "Xəbər yoxdur",
 
   "projects_title": "Layihələrimiz",
+  "projects_description": "Uğurlu layihələr portfelimizi kəşf edin",
   "projects_view": "Layihəyə bax",
   "projects_no_items": "Layihə yoxdur",
   "projects_client": "Müştəri",
