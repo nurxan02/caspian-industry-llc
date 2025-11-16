@@ -59,6 +59,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
                         </a>
                         <ul class="navbar-dropdown-menu">
                             <li><a href="<?php echo BASE_URL; ?>/pages/about.php"><?php echo t('nav_about','About'); ?></a></li>
+                            <li><a href="<?php echo BASE_URL; ?>/pages/careers.php"><?php echo t('nav_careers','Careers'); ?></a></li>
                             <li><a href="<?php echo BASE_URL; ?>/pages/partners.php"><?php echo t('nav_partners','Partners'); ?></a></li>
                             <li><a href="<?php echo BASE_URL; ?>/pages/clients.php"><?php echo t('nav_clients','Our Clients'); ?></a></li>
                             <li><a href="<?php echo BASE_URL; ?>/pages/gallery.php"><?php echo t('nav_gallery','Gallery'); ?></a></li>
@@ -86,6 +87,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
                 <li><a href="<?php echo BASE_URL; ?>/pages/news.php"><?php echo t('nav_news','News'); ?></a></li>
                 <li><a href="<?php echo BASE_URL; ?>/pages/projects.php"><?php echo t('nav_projects','Projects'); ?></a></li>
                 <li><a href="<?php echo BASE_URL; ?>/pages/about.php"><?php echo t('nav_about','About'); ?></a></li>
+                <li><a href="<?php echo BASE_URL; ?>/pages/careers.php"><?php echo t('nav_careers','Careers'); ?></a></li>
                 <li><a href="<?php echo BASE_URL; ?>/pages/clients.php"><?php echo t('nav_clients','Our Clients'); ?></a></li>
                 <li><a href="<?php echo BASE_URL; ?>/pages/partners.php"><?php echo t('nav_partners','Partners'); ?></a></li>
                 <li><a href="<?php echo BASE_URL; ?>/pages/gallery.php"><?php echo t('nav_gallery','Gallery'); ?></a></li>

@@ -30,6 +30,7 @@
                     <ul class="footer-links">
                         <li><a href="<?php echo BASE_URL; ?>/index.php"><?php echo t('nav_home'); ?></a></li>
                         <li><a href="<?php echo BASE_URL; ?>/pages/about.php"><?php echo t('nav_about'); ?></a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/pages/careers.php"><?php echo t('nav_careers','Careers'); ?></a></li>
                         <li><a href="<?php echo BASE_URL; ?>/pages/news.php"><?php echo t('nav_news'); ?></a></li>
                         <li><a href="<?php echo BASE_URL; ?>/pages/projects.php"><?php echo t('nav_projects'); ?></a></li>
                     </ul>
