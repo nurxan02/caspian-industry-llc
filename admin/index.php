@@ -3,7 +3,7 @@
 <?php
 $db = Database::getInstance()->getConnection();
 
-// Get statistics
+
 $stats = [
     'contacts' => $db->query("SELECT COUNT(*) FROM contacts")->fetchColumn(),
     'news' => $db->query("SELECT COUNT(*) FROM news")->fetchColumn(),
@@ -47,7 +47,6 @@ $unread_contacts = $db->query("SELECT COUNT(*) FROM contacts WHERE is_read = 0")
     </div>
 </div>
 
-<!-- Recent Contacts -->
 <div class="admin-card">
     <div class="admin-card-header">
         <h3 class="admin-card-title">Recent Contact Forms</h3>
@@ -95,7 +94,7 @@ $unread_contacts = $db->query("SELECT COUNT(*) FROM contacts WHERE is_read = 0")
     </table>
 </div>
 
-<!-- Recent News -->
+
 <div class="admin-card">
     <div class="admin-card-header">
         <h3 class="admin-card-title">Recent News</h3>

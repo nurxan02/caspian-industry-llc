@@ -57,7 +57,7 @@
 }
 </style>
 
-<!-- Hero Section -->
+
 <section class="page-hero" style="padding-top: 120px; padding-bottom: var(--spacing-lg); background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--bg-darker) 100%);">
     <div class="container">
         <div class="section-header">
@@ -68,7 +68,6 @@
     </div>
 </section>
 
-<!-- FAQ List -->
 <section class="section">
     <div class="container">
         <div class="faq-container">

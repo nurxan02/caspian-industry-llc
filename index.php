@@ -1,6 +1,5 @@
 <?php require_once 'includes/header.php'; ?>
 
-<!-- Hero Section - GitHub Style -->
 <section class="hero section" id="hero-section">
     <div class="hero-background" id="vanta-bg"></div>
     <div class="container">
@@ -22,22 +21,21 @@
                         <?php echo t('home_cta_contact','Contact Sales'); ?>
                     </a>
                 </div>
-                
-                <!-- Stats with Glow Effect -->
+
                 <div class="hero-stats">
                     <div class="stat-item">
                         <div class="stat-value glow-text">15+</div>
-                        <div class="stat-label">Years Experience</div>
+                        <div class="stat-label"><?php echo t('stats_years_experience','Years Experience'); ?></div>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
                         <div class="stat-value glow-text">500+</div>
-                        <div class="stat-label">Projects Delivered</div>
+                        <div class="stat-label"><?php echo t('stats_projects_delivered','Projects Delivered'); ?></div>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
                         <div class="stat-value glow-text">200+</div>
-                        <div class="stat-label">Global <br> Clients</div>
+                        <div class="stat-label"><?php echo t('stats_global_clients','Global <br> Clients'); ?></div>
                     </div>
                 </div>
             </div>
@@ -46,7 +44,6 @@
     <div class="hero-gradient-overlay"></div>
 </section>
 
-<!-- Features Section - GitHub Style -->
 <section class="section">
     <div class="container">
         <div class="section-header text-center">
@@ -110,7 +107,35 @@
     </div>
 </section>
 
-<!-- About Us Section - Modern Azerbaijan Style -->
+<!-- Client Logo Carousel Section -->
+<section class="clients-carousel-section">
+    <div class="container">
+        <div class="carousel-wrapper">
+            <?php
+            $db = Database::getInstance()->getConnection();
+            $stmt = $db->query("SELECT * FROM clients WHERE logo IS NOT NULL AND logo != '' ORDER BY sort_order ASC");
+            $clients = $stmt->fetchAll();
+            
+            if (count($clients) > 0) {
+            ?>
+            <div class="clients-carousel-container">
+                <div class="clients-carousel">
+                    <div class="clients-track" id="clientsTrack">
+                        <?php foreach ($clients as $client): 
+                            $logo = BASE_URL . '/assets/uploads/' . $client['logo'];
+                        ?>
+                        <div class="client-logo-item">
+                            <img src="<?php echo $logo; ?>" alt="<?php echo htmlspecialchars($client['name']); ?>" />
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
+</section>
+
 <section class="section about-section-modern">
     <div class="container">
         <div class="about-wrapper">
@@ -208,7 +233,7 @@
     </div>
 </section>
 
-<!-- Latest News Section - GitHub Style -->
+
 <section class="section section-dark">
     <div class="container">
         <div class="section-header text-center">
@@ -266,7 +291,6 @@
     </div>
 </section>
 
-<!-- Featured Projects Section - GitHub Style -->
 <section class="section">
     <div class="container">
         <div class="section-header text-center">
@@ -337,7 +361,6 @@
     </div>
 </section>
 
-<!-- Partners Section - GitHub Style -->
 <section class="section section-dark">
     <div class="container">
         <div class="section-header text-center">
@@ -378,7 +401,7 @@
     </div>
 </section>
 
-<!-- CTA Section - GitHub Style -->
+
 <section class="section cta-section">
     <div class="container">
         <div class="cta-content">
@@ -401,7 +424,7 @@
 </section>
 
 <script>
-// Initialize Vanta.js NET effect
+// Vanta.js
 let vantaEffect = null;
 
 if (window.VANTA && window.THREE) {
@@ -423,7 +446,7 @@ if (window.VANTA && window.THREE) {
     });
 }
 
-// Clean up on page unload
+
 window.addEventListener('beforeunload', function() {
     if (vantaEffect) vantaEffect.destroy();
 });

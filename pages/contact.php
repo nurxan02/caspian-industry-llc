@@ -1,9 +1,8 @@
 <?php require_once '../includes/header.php'; ?>
 
-<!-- Contact Section - Modern Arctiq Style -->
 <section class="contact-section">
     <div class="contact-container">
-        <!-- Left Side - Form -->
+
         <div class="contact-form-wrapper">
             <h1 class="contact-title"><?php echo t('contact_title','We\'re here to help'); ?></h1>
             
@@ -28,9 +27,7 @@
                 </button>
             </form>
         </div>
-        
-        
-        <!-- Right Side - Testimonial Card -->
+
         <div class="testimonial-card-wrapper">
             <div class="testimonial-card">
                 <div class="testimonial-gradient"></div>
@@ -71,12 +68,12 @@
 
     </div>
     
-    <!-- Contact Information Cards -->
+
     <div class="contact-info-wrapper" >
         <div class="container">
             <?php
             $db = Database::getInstance()->getConnection();
-            // Get settings as key-value pairs
+
             $stmt = $db->query("SELECT setting_key, setting_value FROM site_settings");
             $settingsData = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
             
@@ -132,7 +129,7 @@
 </section>
 
 <style>
-/* Contact Section - Modern Arctiq Style */
+
 .contact-section {
     min-height: 100vh;
     background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d1117 100%);
@@ -198,7 +195,6 @@
     margin-bottom: 4rem;
 }
 
-/* Left Side - Form */
 .contact-form-wrapper {
     padding: 2rem 0;
 }
@@ -301,7 +297,6 @@
     transform: translateY(0);
 }
 
-/* Contact Information Wrapper - Below Main Container */
 .contact-info-wrapper {
     position: relative;
     z-index: 1;
@@ -405,7 +400,6 @@
     }
 }
 
-/* Right Side - Testimonial Card */
 .testimonial-card-wrapper {
     position: sticky;
     top: 140px;
@@ -486,7 +480,6 @@
     font-weight: 600;
 }
 
-/* Responsive */
 @media (max-width: 968px) {
     .contact-container {
         grid-template-columns: 1fr;
@@ -524,7 +517,6 @@ document.addEventListener('DOMContentLoaded', function() {
     handleContactForm('contactForm');
 });
 
-// Load projects for testimonials
 const testimonials = <?php
     $db = Database::getInstance()->getConnection();
     $lang_suffix = Language::getSuffix();

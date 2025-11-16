@@ -12,32 +12,18 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo SITE_NAME; ?> - <?php echo t('nav_' . $current_page, ucfirst($current_page)); ?></title>
     <meta name="description" content="<?php echo t('hero_subtitle'); ?>">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="<?php echo BASE_URL; ?>/assets/images/logo.svg">
-    
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/style.css?v=<?php echo time(); ?>">
-    
-    <!-- Three.js for 3D effects -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    
-    <!-- Vanta.js NET Effect -->
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="navbar-container">
-            <!-- Mobile language dropdown (left side on mobile) -->
             <div class="mobile-language-dropdown">
                 <button class="mobile-lang-toggle" id="mobile-lang-toggle" aria-label="Select language" aria-expanded="false">
                     <i class="fas fa-globe"></i>
@@ -49,7 +35,6 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
                 </div>
             </div>
             
-            <!-- Logo (center on mobile) -->
             <a href="<?php echo BASE_URL; ?>/index.php" class="navbar-logo">
                 <picture>
                     <!-- <source media="(max-width: 768px)" srcset="<?php echo BASE_URL; ?>/assets/images/logo.svg"> -->
@@ -93,8 +78,6 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
             </div>
         </div>
     </nav>
-
-    <!-- Apple-style Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
         <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
         <div class="mobile-menu-panel" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">

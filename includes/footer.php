@@ -1,4 +1,3 @@
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -41,6 +40,7 @@
                     <ul class="footer-links">
                         <li><a href="<?php echo BASE_URL; ?>/pages/gallery.php"><?php echo t('nav_gallery'); ?></a></li>
                         <li><a href="<?php echo BASE_URL; ?>/pages/partners.php"><?php echo t('nav_partners'); ?></a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/pages/clients.php"><?php echo t('nav_clients'); ?></a></li>
                         <li><a href="<?php echo BASE_URL; ?>/pages/contact.php"><?php echo t('nav_contact'); ?></a></li>
                         <li><a href="<?php echo BASE_URL; ?>/pages/faq.php"><?php echo t('nav_faq'); ?></a></li>
                     </ul>
@@ -74,8 +74,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Main JavaScript -->
     <script src="<?php echo BASE_URL; ?>/assets/js/main.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>

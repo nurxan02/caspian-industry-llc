@@ -78,7 +78,10 @@
   "home_hero_title": "Gələcəyin <span class=\"gradient-text\">sənaye mükəmməlliyini</span> qururuq",
   "home_hero_subtitle": "Müasir texnologiyalar və on illik təcrübəni birləşdirərək dünya üzrə istisna nəticələr təqdim edən kompleks sənaye həlləri təchizatçısıyıq.",
   "home_cta_projects": "Layihələrimiz",
-  "home_cta_contact": "Satışla əlaqə",
+  "home_cta_contact": "Satış ilə əlaqə",
+  "stats_years_experience": "İl <br> təcrübə",
+  "stats_projects_delivered": "Tamamlanmış layihə",
+  "stats_global_clients": "Qlobal <br> müştəri",
 
   "home_why_tag": "Niyə biz?",
   "home_why_title": "<span class=\"gradient-text\">Sənaye liderləri</span> üçün",
@@ -156,5 +159,9 @@
   "home_stats_desc": "Müştəri məmnuniyyəti bizim üçün prioritetdir. Yüksək keyfiyyətli xidmət və məhsullarımızla müştərilərimizin etibarını qazanmışıq. Onların rəyləri bizim üçün dəyərlidir.",
   "home_stats_item1": "Beynəlxalq standartlara uyğun məhsullar",
   "home_stats_item2": "Etibarlı biznes tərəfdaşı",
-  "home_stats_item3": "Peşəkar heyət"
+  "home_stats_item3": "Peşəkar heyət",
+  "stats_years_experience": "İl Təcrübə",
+  "stats_projects_completed": "Tamamlanmış Layihə",
+  "stats_happy_clients": "Məmnun Müştəri",
+  "stats_team_members": "Komanda Üzvü"
 }

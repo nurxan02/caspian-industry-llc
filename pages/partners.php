@@ -50,7 +50,7 @@
 }
 </style>
 
-<!-- Hero Section -->
+
 <section class="page-hero" style="padding-top: 120px; padding-bottom: var(--spacing-lg); background: linear-gradient(rgba(13, 17, 23, 0.7), rgba(13, 17, 23, 0.85)), url('<?php echo BASE_URL; ?>/assets/images/partner-back.jpg'); background-size: cover; background-position: center;">
     <div class="container">
         <div class="section-header">
@@ -61,7 +61,7 @@
     </div>
 </section>
 
-<!-- Partners Grid -->
+
 <section class="section">
     <div class="container">
         <div class="partners-grid">

@@ -72,7 +72,7 @@
 }
 </style>
 
-<!-- Hero Section -->
+
 <section class="page-hero" style="padding-top: 120px; padding-bottom: var(--spacing-lg); background: linear-gradient(rgba(13, 17, 23, 0.7), rgba(13, 17, 23, 0.85)), url('<?php echo BASE_URL; ?>/assets/images/gallery-back.jpeg'); background-size: cover; background-position: center;">
     <div class="container">
         <div class="section-header">
@@ -83,7 +83,7 @@
     </div>
 </section>
 
-<!-- Gallery Grid -->
+
 <section class="section">
     <div class="container">
         <div class="gallery-board">

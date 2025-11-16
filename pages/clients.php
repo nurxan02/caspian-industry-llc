@@ -65,7 +65,7 @@
 }
 </style>
 
-<!-- Hero Section -->
+
 <section class="page-hero clients-hero">
     <div class="container">
         <div class="section-header">
@@ -76,7 +76,6 @@
     </div>
 </section>
 
-<!-- Clients Grid -->
 <section class="section">
     <div class="container">
         <div class="clients-grid">

@@ -151,7 +151,7 @@ class Database {
             )
         ");
 
-        // Insert default settings if not exist
+
         $this->insertDefaultSettings();
     }
 
@@ -175,5 +175,5 @@ class Database {
     }
 }
 
-// Initialize database
+
 Database::getInstance();

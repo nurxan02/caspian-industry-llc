@@ -45,7 +45,6 @@
 }
 </style>
 
-<!-- Hero Section -->
 <section class="page-hero"style="background: linear-gradient(rgba(13, 17, 23, 0.7), rgba(13, 17, 23, 0.85)), url('<?php echo BASE_URL; ?>/assets/images/news-back.jpg'); background-size: cover; background-position: center; ">
     <div class="container">
         <div class="section-header">
@@ -56,7 +55,6 @@
     </div>
 </section>
 
-<!-- News Grid -->
 <section class="section">
     <div class="container">
         <div class="news-grid">

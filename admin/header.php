@@ -18,20 +18,14 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel - <?php echo SITE_NAME; ?></title>
-    
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Admin Stylesheet -->
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/style.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/admin.css">
 </head>
 <body>
     <div class="admin-wrapper">
-        <!-- Sidebar -->
+
         <aside class="admin-sidebar">
             <div class="admin-logo">
                 <img src="<?php echo BASE_URL; ?>/assets/images/logo.svg" alt="<?php echo SITE_NAME; ?>" style="height: 40px;  filter: brightness(0) invert(1);">
@@ -79,7 +73,6 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
             </div>
         </aside>
         
-        <!-- Main Content -->
         <main class="admin-main">
             <div class="admin-header">
                 <h1><?php echo ucfirst(str_replace('-', ' ', $current_page)); ?></h1>

@@ -1,7 +1,4 @@
-// Main JavaScript for Caspian Industry
-
 document.addEventListener("DOMContentLoaded", function () {
-  // Navbar scroll effect
   const navbar = document.getElementById("navbar");
 
   window.addEventListener("scroll", function () {
@@ -12,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Mobile language dropdown toggle
   const mobileLangToggle = document.getElementById("mobile-lang-toggle");
   const mobileLangMenu = document.getElementById("mobile-lang-menu");
 
@@ -25,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
       mobileLangMenu.classList.toggle("active");
     });
 
-    // Close dropdown when clicking outside
     document.addEventListener("click", function (e) {
       if (
         !mobileLangToggle.contains(e.target) &&
@@ -37,13 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Mobile menu toggle (legacy + Apple-style)
   const navbarToggle = document.getElementById("navbar-toggle");
   const navbarMenu = document.getElementById("navbar-menu");
   const navbarCenter = document.querySelector(".navbar-center");
   const navbarActions = document.querySelector(".navbar-actions");
 
-  // New Apple-style elements
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileOverlay = document.getElementById("mobile-menu-overlay");
   const mobilePanel = mobileMenu
@@ -87,14 +80,12 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       e.stopPropagation();
 
-      // Use Apple-style menu on small screens
       if (window.innerWidth <= 768 && mobileMenu) {
         if (mobileMenu.classList.contains("is-open")) closeAppleMenu();
         else openAppleMenu();
         return;
       }
 
-      // Fallback to legacy behavior on desktop
       if (navbarMenu) {
         const isActive = navbarMenu.classList.contains("active");
         navbarMenu.classList.toggle("active");
@@ -117,7 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
       closeAppleMenu();
   });
 
-  // Close mobile menu when clicking on navbar-center overlay
   if (navbarCenter) {
     navbarCenter.addEventListener("click", function (e) {
       if (e.target === navbarCenter) {
@@ -133,7 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Close mobile menu when clicking on a link
   const navLinks = document.querySelectorAll(
     ".navbar-menu a, .mobile-menu-links a"
   );
@@ -152,7 +141,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Fade in animations on scroll
   const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
@@ -170,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const animatedElements = document.querySelectorAll(".card, .section-header");
   animatedElements.forEach((el) => observer.observe(el));
 
-  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
@@ -188,63 +175,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Globe.gl initialization function
-function initGlobe(containerId, locations = [], arcs = []) {
-  const globe = Globe()(document.getElementById(containerId))
-    .globeImageUrl("//unpkg.com/three-globe/example/img/earth-dark.jpg")
-    .backgroundColor("rgba(0,0,0,0)")
-    .showAtmosphere(false)
-    .arcColor(() => ["#6BA8D6", "#205581"])
-    .arcDashLength(0.4)
-    .arcDashGap(1)
-    .arcDashInitialGap(() => Math.random())
-    .arcDashAnimateTime(2000)
-    .pointColor(() => "#6BA8D6")
-    .pointAltitude(0.01)
-    .pointRadius(0.15)
-    .pointsMerge(true);
-
-  // Add labels if locations provided
-  if (locations.length > 0) {
-    globe
-      .labelsData(locations)
-      .labelText("name")
-      .labelSize(1.5)
-      .labelColor(() => "#FEFEFE")
-      .labelResolution(2);
-  }
-
-  // Add arcs if provided
-  if (arcs.length > 0) {
-    globe.arcsData(arcs);
-  }
-
-  // Add location points
-  if (locations.length > 0) {
-    globe.pointsData(locations);
-  }
-
-  // Auto rotate
-  globe.controls().autoRotate = true;
-  globe.controls().autoRotateSpeed = 0.5;
-  globe.controls().enableZoom = false;
-
-  // Responsive sizing
-  const resizeGlobe = () => {
-    const container = document.getElementById(containerId);
-    if (container) {
-      globe.width(container.offsetWidth);
-      globe.height(container.offsetHeight);
-    }
-  };
-
-  window.addEventListener("resize", resizeGlobe);
-  setTimeout(resizeGlobe, 100);
-
-  return globe;
-}
-
-// Form validation and submission
 function handleContactForm(formId) {
   const form = document.getElementById(formId);
   if (!form) return;
@@ -256,7 +186,6 @@ function handleContactForm(formId) {
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
 
-    // Disable button and show loading state
     submitBtn.disabled = true;
     submitBtn.textContent = "Sending...";
 
@@ -286,7 +215,6 @@ function handleContactForm(formId) {
   });
 }
 
-// Show message helper
 function showMessage(type, message) {
   const messageDiv = document.createElement("div");
   messageDiv.className = `alert alert-${type}`;
@@ -312,7 +240,6 @@ function showMessage(type, message) {
   }, 3000);
 }
 
-// Gallery lightbox
 function initGallery() {
   const galleryItems = document.querySelectorAll(".gallery-item");
 
@@ -366,7 +293,6 @@ function initGallery() {
   });
 }
 
-// FAQ Accordion
 function initFAQ() {
   const faqItems = document.querySelectorAll(".faq-item");
 
@@ -376,10 +302,8 @@ function initFAQ() {
       question.addEventListener("click", function () {
         const isActive = item.classList.contains("active");
 
-        // Close all items
         faqItems.forEach((i) => i.classList.remove("active"));
 
-        // Open clicked item if it wasn't active
         if (!isActive) {
           item.classList.add("active");
         }
@@ -388,7 +312,6 @@ function initFAQ() {
   });
 }
 
-// CSS animations
 const style = document.createElement("style");
 style.textContent = `
     @keyframes slideInRight {
@@ -444,3 +367,340 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Client Logo Carousel - Infinite Scroll (Works on all pages)
+function initClientCarousel() {
+  // Find all carousel tracks on the page
+  const clientsTracks = document.querySelectorAll(".clients-track");
+
+  clientsTracks.forEach((clientsTrack, index) => {
+    if (
+      clientsTrack &&
+      clientsTrack.children.length > 0 &&
+      clientsTrack.parentNode
+    ) {
+      // Create unique ID if doesn't exist
+      if (!clientsTrack.id) {
+        clientsTrack.id = "clientsTrack_" + index;
+      }
+
+      // Remove any existing clones for this track
+      try {
+        const existingClones = clientsTrack.parentNode.querySelectorAll(
+          '[aria-hidden="true"]'
+        );
+        existingClones.forEach((clone) => {
+          if (clone && clone.parentNode) {
+            clone.remove();
+          }
+        });
+      } catch (e) {
+        console.warn("Error removing existing clones:", e);
+      }
+
+      // Create seamless infinite scroll by duplicating content
+      const clonedTrack = clientsTrack.cloneNode(true);
+      clonedTrack.removeAttribute("id");
+      clonedTrack.setAttribute("aria-hidden", "true");
+      clonedTrack.classList.add("no-transition");
+
+      // Add the clone right after the original
+      try {
+        if (clientsTrack.parentNode) {
+          clientsTrack.parentNode.appendChild(clonedTrack);
+        }
+      } catch (e) {
+        console.warn("Error appending cloned track:", e);
+        return; // Exit this iteration if we can't append
+      }
+
+      // Exclude from global transitions
+      clientsTrack.classList.add("no-transition");
+
+      // Force restart animations
+      clientsTrack.style.animation = "none";
+      clonedTrack.style.animation = "none";
+
+      // Trigger reflow
+      try {
+        clientsTrack.offsetHeight;
+        clonedTrack.offsetHeight;
+      } catch (e) {
+        console.warn("Error triggering reflow:", e);
+      }
+
+      // Restart animations
+      clientsTrack.style.animation = "scroll 30s linear infinite";
+      clonedTrack.style.animation = "scroll 30s linear infinite";
+
+      // Pause animation on hover for this specific carousel
+      const carousel = clientsTrack.closest(".clients-carousel-container");
+      // if (carousel) {
+      //   // Create unique functions for this carousel instance
+      //   const pauseCarousel = function () {
+      //     try {
+      //       clientsTrack.style.animationPlayState = "paused";
+      //       clonedTrack.style.animationPlayState = "paused";
+      //     } catch (e) {
+      //       console.warn("Error pausing carousel:", e);
+      //     }
+      //   };
+
+      //   const resumeCarousel = function () {
+      //     try {
+      //       clientsTrack.style.animationPlayState = "running";
+      //       clonedTrack.style.animationPlayState = "running";
+      //     } catch (e) {
+      //       console.warn("Error resuming carousel:", e);
+      //     }
+      //   };
+
+      //   // Remove any existing listeners for this carousel
+      //   try {
+      //     if (carousel._pauseCarousel) {
+      //       carousel.removeEventListener("mouseenter", carousel._pauseCarousel);
+      //     }
+      //     if (carousel._resumeCarousel) {
+      //       carousel.removeEventListener(
+      //         "mouseleave",
+      //         carousel._resumeCarousel
+      //       );
+      //     }
+      //   } catch (e) {
+      //     console.warn("Error removing existing listeners:", e);
+      //   }
+
+      //   // Store functions on carousel element
+      //   carousel._pauseCarousel = pauseCarousel;
+      //   carousel._resumeCarousel = resumeCarousel;
+
+      //   carousel.addEventListener("mouseenter", pauseCarousel);
+      //   carousel.addEventListener("mouseleave", resumeCarousel);
+      // }
+    }
+  });
+}
+
+// Initialize carousel when DOM is ready
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initClientCarousel);
+} else {
+  initClientCarousel();
+}
+
+// Re-initialize on window load to ensure all images are loaded
+window.addEventListener("load", initClientCarousel);
+
+// Enhanced Smooth Scrolling for internal links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  });
+});
+
+// Intersection Observer for fade-in animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px",
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+}, observerOptions);
+
+// Apply fade-in animation to sections
+document
+  .querySelectorAll(".section, .card, .feature-item, .project-card, .news-card")
+  .forEach((el) => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(20px)";
+    el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+    observer.observe(el);
+  });
+
+// Optimized parallax effect with throttling to improve performance
+let ticking = false;
+
+function updateParallax() {
+  const scrolled = window.pageYOffset;
+  const parallax = document.querySelector(".hero-section");
+  const speed = scrolled * 0.5;
+
+  if (parallax) {
+    // Use transform instead of backgroundPosition for better performance
+    parallax.style.transform = `translate3d(0, ${speed}px, 0)`;
+  }
+  ticking = false;
+}
+
+function requestParallaxUpdate() {
+  if (!ticking) {
+    requestAnimationFrame(updateParallax);
+    ticking = true;
+  }
+}
+
+// Use passive listener for better performance
+window.addEventListener("scroll", requestParallaxUpdate, { passive: true });
+
+// Enhanced button hover effects
+document
+  .querySelectorAll(".btn, .card, .project-card, .news-card")
+  .forEach((element) => {
+    element.addEventListener("mouseenter", function () {
+      this.style.transform = "translateY(-2px)";
+      this.style.boxShadow = "0 10px 25px rgba(0, 0, 0, 0.3)";
+    });
+
+    element.addEventListener("mouseleave", function () {
+      this.style.transform = "translateY(0)";
+      this.style.boxShadow = "";
+    });
+  });
+
+// Optimized navbar scroll behavior with throttling
+let lastScrollTop = 0;
+let navbarTicking = false;
+
+function updateNavbar() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const navbar = document.getElementById("navbar");
+  const logo = navbar ? navbar.querySelector(".navbar-logo") : null;
+
+  if (navbar) {
+    // Add transition for smooth hiding/showing
+    if (!navbar.style.transition) {
+      navbar.style.transition = "transform 0.3s ease-in-out";
+    }
+
+    if (scrollTop > lastScrollTop && scrollTop > 150) {
+      // Scrolling down - hide navbar but preserve logo state
+      navbar.style.transform = "translateY(-100%)";
+      if (logo) {
+        logo.classList.remove("hidden");
+      }
+    } else {
+      // Scrolling up - show navbar
+      navbar.style.transform = "translateY(0)";
+      if (logo) {
+        logo.classList.remove("hidden");
+      }
+    }
+
+    // Ensure logo is always visible when navbar is visible
+    if (logo && navbar.style.transform === "translateY(0)") {
+      logo.style.opacity = "1";
+      logo.style.visibility = "visible";
+    }
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  navbarTicking = false;
+}
+
+function requestNavbarUpdate() {
+  if (!navbarTicking) {
+    requestAnimationFrame(updateNavbar);
+    navbarTicking = true;
+  }
+}
+
+// Use passive listener for better scroll performance
+window.addEventListener("scroll", requestNavbarUpdate, { passive: true });
+
+// Enhanced loading animation for images with logo protection
+document.querySelectorAll("img").forEach((img) => {
+  // Don't apply loading animation to logo images
+  if (!img.closest(".navbar-logo")) {
+    img.style.opacity = "0";
+    img.style.transition = "opacity 0.5s ease";
+
+    img.addEventListener("load", function () {
+      this.style.opacity = "1";
+    });
+  }
+});
+
+// Add ripple effect to buttons
+document.querySelectorAll(".btn").forEach((button) => {
+  button.addEventListener("click", function (e) {
+    const ripple = document.createElement("span");
+    const diameter = Math.max(this.clientWidth, this.clientHeight);
+    const radius = diameter / 2;
+
+    ripple.style.width = ripple.style.height = diameter + "px";
+    ripple.style.left = e.clientX - this.offsetLeft - radius + "px";
+    ripple.style.top = e.clientY - this.offsetTop - radius + "px";
+    ripple.classList.add("ripple");
+
+    const rippleStyle = document.createElement("style");
+    rippleStyle.textContent = `
+      .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(0);
+        animation: ripple-animation 0.6s linear;
+        pointer-events: none;
+      }
+      
+      @keyframes ripple-animation {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+    `;
+
+    if (!document.head.querySelector(".ripple-styles")) {
+      rippleStyle.className = "ripple-styles";
+      document.head.appendChild(rippleStyle);
+    }
+
+    this.style.position = "relative";
+    this.style.overflow = "hidden";
+    this.appendChild(ripple);
+
+    setTimeout(() => {
+      ripple.remove();
+    }, 600);
+  });
+});
+
+// Logo visibility protection
+function ensureLogoVisibility() {
+  const logos = document.querySelectorAll(".navbar-logo img");
+  logos.forEach((logo) => {
+    if (logo && logo.src) {
+      logo.style.opacity = "1";
+      logo.style.visibility = "visible";
+      logo.style.display = "block";
+    }
+  });
+}
+
+// Run logo protection on load and periodically
+window.addEventListener("load", ensureLogoVisibility);
+document.addEventListener("DOMContentLoaded", ensureLogoVisibility);
+
+// Periodic check for logo visibility (every 3 seconds)
+setInterval(ensureLogoVisibility, 3000);
+
+// Page visibility change protection
+document.addEventListener("visibilitychange", function () {
+  if (!document.hidden) {
+    setTimeout(ensureLogoVisibility, 100);
+  }
+});

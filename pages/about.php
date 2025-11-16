@@ -1,6 +1,5 @@
 <?php require_once '../includes/header.php'; ?>
 
-<!-- Hero Section - About -->
 <section class="hero" style="min-height: 60vh;">
     <div class="hero-background"></div>
     <div class="container">
@@ -16,7 +15,6 @@
     </div>
 </section>
 
-<!-- About Content - Modern Two Column -->
 <section class="section">
     <div class="container">
         <div class="about-content-grid">
@@ -85,25 +83,51 @@
 }
 </style>
 
-<!-- Stats Section - Modern Cards -->
+<section class="clients-carousel-section">
+    <div class="container">
+        <div class="carousel-wrapper">
+            <?php
+            $db = Database::getInstance()->getConnection();
+            $stmt = $db->query("SELECT * FROM clients WHERE logo IS NOT NULL AND logo != '' ORDER BY sort_order ASC");
+            $clients = $stmt->fetchAll();
+            
+            if (count($clients) > 0) {
+            ?>
+            <div class="clients-carousel-container">
+                <div class="clients-carousel">
+                    <div class="clients-track" id="clientsTrack">
+                        <?php foreach ($clients as $client): 
+                            $logo = BASE_URL . '/assets/uploads/' . $client['logo'];
+                        ?>
+                        <div class="client-logo-item">
+                            <img src="<?php echo $logo; ?>" alt="<?php echo htmlspecialchars($client['name']); ?>" />
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
+</section>
 <section class="section section-alt">
     <div class="container">
         <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-lg); margin:10px;">
             <div class="stat-card-modern">
                 <div class="stat-value-modern">15+</div>
-                <div class="stat-label-modern">Years of Experience</div>
+                <div class="stat-label-modern"><?php echo t('stats_years_experience','Years of Experience'); ?></div>
             </div>
             <div class="stat-card-modern">
                 <div class="stat-value-modern">500+</div>
-                <div class="stat-label-modern">Projects Completed</div>
+                <div class="stat-label-modern"><?php echo t('stats_projects_completed','Projects Completed'); ?></div>
             </div>
             <div class="stat-card-modern">
                 <div class="stat-value-modern">200+</div>
-                <div class="stat-label-modern">Happy Clients</div>
+                <div class="stat-label-modern"><?php echo t('stats_happy_clients','Happy Clients'); ?></div>
             </div>
             <div class="stat-card-modern">
                 <div class="stat-value-modern">50+</div>
-                <div class="stat-label-modern">Team Members</div>
+                <div class="stat-label-modern"><?php echo t('stats_team_members','Team Members'); ?></div>
             </div>
         </div>
     </div>
@@ -167,7 +191,6 @@
 }
 </style>
 
-<!-- Values Section - Modern Icon Grid -->
 <section class="section section-alt">
     <div class="container">
         <div class="section-header">
@@ -234,73 +257,188 @@
         </div>
     </div>
 </section>
-    <script src="https://unpkg.com/three"></script>
-    <script src="https://unpkg.com/globe.gl"></script>
+
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+// Ensure Three.js and Globe.gl are loaded only once
+if (!window.globeInitialized) {
+    window.globeInitialized = true;
+    
+    function loadThreeJS() {
+        return new Promise((resolve) => {
+            if (typeof THREE !== 'undefined') {
+                resolve();
+                return;
+            }
+            
+            const script = document.createElement('script');
+            script.src = 'https://unpkg.com/three@0.134.0/build/three.min.js';
+            script.onload = resolve;
+            document.head.appendChild(script);
+        });
+    }
+    
+    function loadGlobeGL() {
+        return new Promise((resolve) => {
+            if (typeof Globe !== 'undefined') {
+                resolve();
+                return;
+            }
+            
+            const script = document.createElement('script');
+            script.src = 'https://unpkg.com/globe.gl@2.27.2/dist/globe.gl.min.js';
+            script.onload = resolve;
+            document.head.appendChild(script);
+        });
+    }
+    
+    async function initializeGlobe() {
+        try {
+            await loadThreeJS();
+            await loadGlobeGL();
+            
+            // Wait for DOM to be ready
+            if (document.readyState === 'loading') {
+                await new Promise(resolve => document.addEventListener('DOMContentLoaded', resolve));
+            }
+            
+            // Small delay to ensure everything is ready
+            setTimeout(initGlobe, 500);
+        } catch (error) {
+            console.error('Failed to load globe dependencies:', error);
+        }
+    }
+    
+    initializeGlobe();
+}
+
+function initGlobe() {
+    // Wait a bit more for DOM to be fully ready
+    const globeContainer = document.getElementById('aboutGlobe');
+    if (!globeContainer) {
+        console.warn('Globe container not found, retrying...');
+        setTimeout(initGlobe, 1000);
+        return;
+    }
+    
+    if (typeof Globe === 'undefined') {
+        console.warn('Globe library not loaded, retrying...');
+        setTimeout(initGlobe, 1000);
+        return;
+    }
+
+    // Ensure container has proper dimensions
+    const containerRect = globeContainer.getBoundingClientRect();
+    if (containerRect.width === 0 || containerRect.height === 0) {
+        console.warn('Container has no dimensions, retrying...');
+        setTimeout(initGlobe, 1000);
+        return;
+    }
+
+    console.log('Initializing globe with container dimensions:', containerRect.width, 'x', containerRect.height);
+
     const locations = [
-        // Ana merkez
         { lat: 40.4093, lng: 49.8671, name: 'BAKU' },
-        
-        // Avrupa
         { lat: 51.5074, lng: -0.1278, name: 'LONDON' },
         { lat: 48.8566, lng: 2.3522, name: 'PARIS' },
         { lat: 52.5200, lng: 13.4050, name: 'BERLIN' },
         { lat: 41.9028, lng: 12.4964, name: 'ROME' },
         { lat: 40.4168, lng: -3.7038, name: 'MADRID' },
-        
-        // Asya
         { lat: 35.6762, lng: 139.6503, name: 'TOKYO' },
         { lat: 39.9042, lng: 116.4074, name: 'BEIJING' },
         { lat: 1.3521, lng: 103.8198, name: 'SINGAPORE' },
         { lat: 19.0760, lng: 72.8777, name: 'MUMBAI' },
         { lat: 37.5665, lng: 126.9780, name: 'SEOUL' },
-        
-        // Orta Doğu & Körfez
         { lat: 25.2048, lng: 55.2708, name: 'DUBAI' },
         { lat: 29.3759, lng: 47.9774, name: 'KUWAIT' },
-
-        
-        // Kuzey Amerika
         { lat: 40.7128, lng: -74.0060, name: 'NEW YORK' },
         { lat: 29.7604, lng: -95.3698, name: 'HOUSTON' },
         { lat: 34.0522, lng: -118.2437, name: 'LOS ANGELES' },
-        
-        // Rusya & CIS
         { lat: 55.7558, lng: 37.6173, name: 'MOSCOW' },
         { lat: 51.1694, lng: 71.4491, name: 'ASTANA' },
         { lat: 41.2995, lng: 69.2401, name: 'TASHKENT' }
     ];
-    
-    const arcs = [
-        // Baku'dan Avrupa'ya
-        { startLat: 40.4093, startLng: 49.8671, endLat: 51.5074, endLng: -0.1278 }, // London
-        { startLat: 40.4093, startLng: 49.8671, endLat: 48.8566, endLng: 2.3522 },   // Paris
-        { startLat: 40.4093, startLng: 49.8671, endLat: 52.5200, endLng: 13.4050 },  // Berlin
-        { startLat: 40.4093, startLng: 49.8671, endLat: 41.9028, endLng: 12.4964 },  // Rome
-        
-        // Baku'dan Asya'ya
-        { startLat: 40.4093, startLng: 49.8671, endLat: 35.6762, endLng: 139.6503 }, // Tokyo
-        { startLat: 40.4093, startLng: 49.8671, endLat: 39.9042, endLng: 116.4074 }, // Beijing
-        { startLat: 40.4093, startLng: 49.8671, endLat: 1.3521, endLng: 103.8198 },  // Singapore
-        
-        // Baku'dan Körfez'e
-        { startLat: 40.4093, startLng: 49.8671, endLat: 25.2048, endLng: 55.2708 },  // Dubai
-        { startLat: 40.4093, startLng: 49.8671, endLat: 29.3759, endLng: 47.9774 },  // Kuwait
 
-        
-        // Baku'dan Amerika'ya
-        { startLat: 40.4093, startLng: 49.8671, endLat: 40.7128, endLng: -74.0060 }, // New York
-        { startLat: 40.4093, startLng: 49.8671, endLat: 29.7604, endLng: -95.3698 }, // Houston
-        
-        // Baku'dan CIS'e
-        { startLat: 40.4093, startLng: 49.8671, endLat: 55.7558, endLng: 37.6173 },  // Moscow
-        { startLat: 40.4093, startLng: 49.8671, endLat: 51.1694, endLng: 71.4491 },  // Astana
-        { startLat: 40.4093, startLng: 49.8671, endLat: 41.2995, endLng: 69.2401 }   // Tashkent
+    const arcs = [
+        { startLat: 40.4093, startLng: 49.8671, endLat: 51.5074, endLng: -0.1278 }, // Baku to London
+        { startLat: 40.4093, startLng: 49.8671, endLat: 48.8566, endLng: 2.3522 },   // Baku to Paris
+        { startLat: 40.4093, startLng: 49.8671, endLat: 52.5200, endLng: 13.4050 },  // Baku to Berlin
+        { startLat: 40.4093, startLng: 49.8671, endLat: 41.9028, endLng: 12.4964 },  // Baku to Rome
+        { startLat: 40.4093, startLng: 49.8671, endLat: 35.6762, endLng: 139.6503 }, // Baku to Tokyo
+        { startLat: 40.4093, startLng: 49.8671, endLat: 39.9042, endLng: 116.4074 }, // Baku to Beijing
+        { startLat: 40.4093, startLng: 49.8671, endLat: 1.3521, endLng: 103.8198 },  // Baku to Singapore
+        { startLat: 40.4093, startLng: 49.8671, endLat: 25.2048, endLng: 55.2708 },  // Baku to Dubai
+        { startLat: 40.4093, startLng: 49.8671, endLat: 29.3759, endLng: 47.9774 },  // Baku to Kuwait
+        { startLat: 40.4093, startLng: 49.8671, endLat: 40.7128, endLng: -74.0060 }, // Baku to New York
+        { startLat: 40.4093, startLng: 49.8671, endLat: 29.7604, endLng: -95.3698 }, // Baku to Houston
+        { startLat: 40.4093, startLng: 49.8671, endLat: 55.7558, endLng: 37.6173 },  // Baku to Moscow
+        { startLat: 40.4093, startLng: 49.8671, endLat: 51.1694, endLng: 71.4491 },  // Baku to Astana
+        { startLat: 40.4093, startLng: 49.8671, endLat: 41.2995, endLng: 69.2401 }   // Baku to Tashkent
     ];
-    
-    initGlobe('aboutGlobe', locations, arcs);
-});
+
+    try {
+        // Clear the container first
+        globeContainer.innerHTML = '';
+        
+        const world = Globe()
+            .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
+            .backgroundColor('rgba(13, 17, 23, 0)')
+            .showGlobe(true)
+            .showAtmosphere(true)
+            .atmosphereColor('#58a6ff')
+            .atmosphereAltitude(0.1)
+            // Points (cities)
+            .pointsData(locations)
+            .pointColor(() => '#58a6ff')
+            .pointAltitude(0.01)
+            .pointRadius(0.6)
+            .pointResolution(8)
+            // Labels (city names)
+            .labelsData(locations)
+            .labelText('name')
+            .labelColor(() => '#ffffff')
+            .labelDotRadius(0.4)
+            .labelSize(1.2)
+            .labelResolution(2)
+            // Arcs (connections from Baku)
+            .arcsData(arcs)
+            .arcColor(() => ['#58a6ff', '#0ea5e9'])
+            .arcDashLength(0.4)
+            .arcDashGap(1)
+            .arcDashInitialGap(() => Math.random())
+            .arcDashAnimateTime(2000)
+            .arcStroke(0.5)
+            .width(containerRect.width)
+            .height(containerRect.height)
+            (globeContainer);
+
+        // Auto-rotate
+        world.controls().autoRotate = true;
+        world.controls().autoRotateSpeed = 0.5;
+        world.controls().enableZoom = false;
+        world.controls().enablePan = false;
+        
+        // Set initial position
+        world.pointOfView({ lat: 40.4093, lng: 49.8671, altitude: 2.5 });
+        
+        console.log('Globe initialized successfully');
+        
+        // Handle window resize
+        const resizeHandler = () => {
+            const newRect = globeContainer.getBoundingClientRect();
+            if (newRect.width > 0 && newRect.height > 0) {
+                world.width(newRect.width).height(newRect.height);
+            }
+        };
+        
+        window.addEventListener('resize', resizeHandler);
+        
+        // Store globe instance for cleanup
+        window.aboutGlobeInstance = world;
+        
+    } catch (error) {
+        console.error('Error initializing globe:', error);
+    }
+}
 </script>
 
 <?php require_once '../includes/footer.php'; ?>

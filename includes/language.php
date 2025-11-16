@@ -6,7 +6,7 @@ class Language {
     private static $translations = [];
 
     public static function init() {
-        // Check if language is set in session or GET parameter
+
         if (isset($_GET['lang']) && in_array($_GET['lang'], AVAILABLE_LANGS)) {
             self::$currentLang = $_GET['lang'];
             $_SESSION['lang'] = $_GET['lang'];
@@ -14,7 +14,7 @@ class Language {
             self::$currentLang = $_SESSION['lang'];
         }
 
-        // Load translations
+
         self::loadTranslations();
     }
 
@@ -39,10 +39,8 @@ class Language {
     }
 }
 
-// Initialize language
 Language::init();
 
-// Helper function
 function t($key, $default = '') {
     return Language::get($key, $default);
 }

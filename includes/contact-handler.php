@@ -15,7 +15,7 @@ $phone = trim($_POST['phone'] ?? '');
 $subject = trim($_POST['subject'] ?? 'Contact Form');
 $message = trim($_POST['message'] ?? '');
 
-// Validation
+
 if (empty($name) || empty($email) || empty($message)) {
     echo json_encode(['success' => false, 'message' => 'Please fill in all required fields']);
     exit;
@@ -35,8 +35,6 @@ try {
     ");
     
     $stmt->execute([$name, $email, $phone, $subject, $message]);
-    
-    // Here you can add email notification logic if needed
     
     echo json_encode([
         'success' => true, 

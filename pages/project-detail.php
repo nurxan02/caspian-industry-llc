@@ -80,7 +80,7 @@ $images = $project['images'] ? json_decode($project['images'], true) : [];
 
 <section class="section">
     <div class="container">
-        <!-- Project Info -->
+
         <div class="project-info">
             <?php if ($project['client']): ?>
             <div class="info-item">
@@ -103,15 +103,13 @@ $images = $project['images'] ? json_decode($project['images'], true) : [];
             </div>
             <?php endif; ?>
         </div>
-        
-        <!-- Project Description -->
+
         <div style="max-width: 800px; margin: var(--spacing-lg) 0;">
             <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-secondary);">
                 <?php echo nl2br(htmlspecialchars($description)); ?>
             </p>
         </div>
-        
-        <!-- Project Gallery -->
+
         <?php if (!empty($images)): ?>
         <h2 style="margin: var(--spacing-lg) 0 var(--spacing-md);">Project Gallery</h2>
         <div class="project-gallery gallery-item">
